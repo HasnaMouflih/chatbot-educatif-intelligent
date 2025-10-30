@@ -1,5 +1,6 @@
 /env/
-/models_saved/
+/models_saved/dataset_educatif.csv1/
+/models_saved/mon_chatbot_EN_v22/
 /chatbot-frontend/node_modules/
 
 *.zip
