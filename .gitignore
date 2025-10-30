@@ -1,8 +1,7 @@
 /env/
 /models_saved/
 /chatbot-frontend/node_modules/
-/kaggle/
-*.csv
+
 *.zip
 *.xlsx
 
