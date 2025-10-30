@@ -1,0 +1,13 @@
+/env/
+/models_saved/
+/chatbot-frontend/node_modules/
+/kaggle/
+*.csv
+*.zip
+*.xlsx
+
+
+# OS & IDE
+__pycache__/
+.vscode/
+.DS_Store

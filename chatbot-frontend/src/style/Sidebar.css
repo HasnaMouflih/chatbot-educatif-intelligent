@@ -1,0 +1,56 @@
+/* Ajouter ce CSS à Sidebar.css ou ChatPage.css */
+
+.history-item-container {
+  display: flex; /* Aligner le bouton texte et l'icône */
+  align-items: center; /* Centrer verticalement */
+  position: relative; /* Pour positionner l'icône si besoin */
+  width: 100%;
+}
+
+.history-item {
+  flex-grow: 1; /* Le bouton texte prend toute la place */
+  /* Styles existants pour history-item */
+  width: auto; /* Annuler width: 100% si défini précédemment */
+  padding: 8px 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.875em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--sidebar-text, #ececf1);
+  transition: background-color 0.15s ease, color 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.history-item:hover {
+  background-color: var(--sidebar-hover-bg, #2a2b32);
+}
+.history-item.active {
+  background-color: var(--sidebar-active-bg, #343541);
+  color: #fff;
+  font-weight: 500;
+}
+
+.delete-chat-btn {
+  background: none;
+  border: none;
+  color: rgba(236, 236, 241, 0.5); /* Couleur icône grise transparente */
+  cursor: pointer;
+  padding: 5px; /* Petite zone cliquable */
+  font-size: 0.9em; /* Taille de l'icône */
+  margin-left: 5px; /* Espace entre texte et icône */
+  border-radius: 4px;
+  line-height: 1; /* Empêche hauteur excessive */
+  transition: color 0.15s ease, background-color 0.15s ease;
+  flex-shrink: 0; /* Empêche l'icône de rétrécir */
+}
+
+.delete-chat-btn:hover {
+  color: #f87171; /* Rouge au survol */
+  background-color: rgba(239, 68, 68, 0.1); /* Fond rouge très léger */
+}

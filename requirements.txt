@@ -1,0 +1,39 @@
+# Fichier: requirements.txt
+flask
+flask_cors
+pandas
+beautifulsoup4
+
+
+# Fichier: requirements.txt
+streamlit  # <-- Pour le Frontend
+fastapi    # <-- Pour le Backend
+uvicorn    # <-- Le serveur pour FastAPI
+pymongo[srv] # <-- Pour MongoDB Atlas
+transformers # (Pour l'IA, plus tard)
+torch        # (Pour l'IA, plus tard)
+requests     # (Pour Streamlit <-> FastAPI)
+
+
+uvicorn[standard]  # 'standard' inclut la gestion des websockets etc.
+
+
+
+passlib[bcrypt]
+python-jose[cryptography]
+pydantic[email]
+
+python-multipart
+
+pip install transformers torch # Ou tensorflow
+pip install openpyxl
+pip install pymongo[srv]
+pip install kaggle
+pip install googletrans==4.0.0-rc1
+pip install langdetect
+pip install sentencepiece
+
+
+cd chatbot-frontend
+ python -m uvicorn src.app_api:app --reload --port 8000
+ npm start                                                             

@@ -1,0 +1,78 @@
+/* src/App.css (Thème Violet) */
+
+/* ========================================= */
+/* --- Variables de Couleur Globales --- */
+/* ========================================= */
+:root {
+  /* Fonds */
+  --bg-main: #f4f5f7;       /* Fond général gris très clair */
+  --bg-app: #ffffff;         /* Fond principal de l'application (zone chat) */
+  --sidebar-bg: #4a154b;    /* Violet foncé pour la sidebar (type Slack/PubNub) */
+  --bot-bubble-bg: #f8f9fa;  /* Fond gris très clair pour bulle bot */
+
+  /* Textes */
+  --text-primary: #1d1c1d;      /* Noir doux */
+  --text-secondary: #616061;     /* Gris moyen */
+  --sidebar-text: #d1d2d3;       /* Texte gris clair dans la sidebar */
+  --sidebar-active-text: #ffffff; /* Texte blanc pour élément actif sidebar */
+  --user-bubble-text: #ffffff;    /* Texte blanc pour bulle utilisateur */
+  --bot-bubble-text: #1d1c1d;     /* Texte foncé pour bulle bot */
+  --button-primary-text: #ffffff; /* Texte blanc pour bouton primaire */
+
+  /* Couleurs Accent/Actif */
+  --sidebar-hover-bg: #111553;      /* Violet un peu plus foncé au survol */
+  --sidebar-active-bg: #1164a3;     /* Bleu pour l'élément actif (contraste) */
+  --user-bubble-bg: #007a5a;     /* Vert pour bulle utilisateur (contraste) */
+  --link-color: #1264a3;           /* Bleu pour liens */
+  --error-color: #d73a49;          /* Rouge erreur */
+  --button-primary-bg: #007a5a;     /* Vert pour bouton primaire */
+  --button-primary-hover-bg: #148567; /* Vert plus foncé au survol */
+
+  /* Bordures */
+  --border-color: #e4e7eb;       /* Bordures claires */
+  --sidebar-border: #522653;    /* Bordure légèrement plus claire que le fond sidebar */
+}
+
+/* ========================================= */
+/* --- Style du Body --- */
+/* ========================================= */
+body {
+  margin: 0;
+  font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Police type Slack */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* ========================================= */
+/* --- Conteneur Principal de l'App --- */
+/* ========================================= */
+.App {
+  /* Gardons la taille fixe pour l'instant */
+  width: 999px;
+  height: 700px;
+
+  display: flex;
+  background-color: var(--bg-app);
+  border-radius: 8px; /* Moins arrondi */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre plus standard */
+  overflow: hidden;
+  border: 1px solid #ccc; /* Ajouter une bordure fine à l'app */
+}
+
+/* ========================================= */
+/* --- Style Global Erreur --- */
+/* ========================================= */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875em;
+  margin-top: 5px;
+  padding: 5px;
+}
