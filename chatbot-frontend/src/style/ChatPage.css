@@ -1,0 +1,265 @@
+/* src/components/ChatPage.css (Thème Violet) */
+
+.chat-page-container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--bg-app);
+  /* border-radius: 10px; /* Enlever si .App a déjà un radius */
+}
+
+/* ========================================= */
+/* --- Barre Latérale (Sidebar) --- */
+/* ========================================= */
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: var(--sidebar-bg); /* Violet foncé */
+  color: var(--sidebar-text); /* Texte gris clair */
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0; /* Ajuster padding vertical */
+  box-sizing: border-box;
+  height: 100%;
+  border-right: none; /* Pas de bordure droite si fond différent */
+}
+
+.sidebar-header {
+  padding: 10px 20px 15px 20px; /* Padding standard */
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--sidebar-border); /* Ligne séparation violette */
+}
+.sidebar-header h2 { margin: 0 0 4px 0; font-size: 1.1em; font-weight: 600; color: #fff; } /* Titre blanc gras */
+.user-email { font-size: 0.85em; color: rgba(255, 255, 255, 0.7); word-break: break-all; } /* Email plus visible */
+
+.new-chat-btn {
+  display: flex; align-items: center; gap: 8px; width: calc(100% - 30px); /* Prend en compte padding parent */
+  margin: 0 auto 15px auto; padding: 9px 12px; background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Bordure blanche transparente */ border-radius: 6px; cursor: pointer;
+  font-size: 0.9em; font-weight: 500; /* Texte medium */ color: var(--sidebar-text); text-align: left;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.new-chat-btn:hover { background-color: var(--sidebar-hover-bg); border-color: rgba(255, 255, 255, 0.4); }
+
+.history-title {
+  font-weight: 700; font-size: 0.8em; /* Plus petit mais gras */ margin-bottom: 8px;
+  margin-top: 15px; color: rgba(255, 255, 255, 0.6); /* Titre moins visible */ padding: 0 20px; /* Padding standard */
+  text-transform: uppercase; letter-spacing: 0.05em;
+}
+
+.history-list {
+  flex-grow: 1; overflow-y: auto; margin-bottom: 10px; display: flex;
+  flex-direction: column; gap: 1px; /* Très petit espace */ padding: 0 10px; /* Padding pour les items */
+}
+/* Scrollbar sombre */
+.history-list::-webkit-scrollbar { width: 8px; }
+.history-list::-webkit-scrollbar-thumb { background: #5a2e5b; border-radius: 8px;} /* Violet plus foncé */
+.history-list::-webkit-scrollbar-thumb:hover { background: #6b3e6c; }
+.history-list::-webkit-scrollbar-track { background: transparent; }
+
+/* Conteneur ligne historique */
+.history-item-container {
+  display: flex; align-items: center; position: relative; width: 100%; border-radius: 4px; /* Moins arrondi */
+  transition: background-color 0.15s ease;
+}
+.history-item-container:hover { background-color: var(--sidebar-hover-bg); }
+.history-item-container.menu-open { background-color: var(--sidebar-hover-bg); }
+
+/* Bouton historique principal */
+.history-item {
+  flex-grow: 1; width: auto; padding: 7px 10px; /* Padding réduit */ background-color: transparent;
+  border: none; border-radius: 4px 0 0 4px; text-align: left; cursor: pointer;
+  font-size: 0.9em; /* Taille standard */ white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  color: var(--sidebar-text); transition: color 0.15s ease;
+  display: flex; align-items: center; gap: 8px;
+}
+.history-item:hover { background-color: transparent; }
+.history-item.active {
+  background-color: var(--sidebar-active-bg); /* Bleu actif */ color: var(--sidebar-active-text); /* Texte blanc */
+  font-weight: 600; /* Plus gras si actif */ border-radius: 4px; /* Arrondi complet si actif */
+}
+
+.history-item-icon { flex-shrink: 0; opacity: 0.8; }
+.history-item-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex-grow: 1; }
+
+/* Bouton Options (⋮) */
+.options-btn {
+  background: none; border: none; color: rgba(209, 210, 211, 0.6); /* Gris clair transparent */ cursor: pointer;
+  padding: 7px 5px; font-size: 1.1em; line-height: 1; border-radius: 0 4px 4px 0;
+  transition: color 0.15s ease, background-color 0.15s ease; flex-shrink: 0; margin-left: auto;
+  opacity: 0; /* Caché par défaut */
+}
+.history-item-container:hover .options-btn { opacity: 1; } /* Afficher au survol */
+.history-item-container.menu-open .options-btn { opacity: 1; } /* Garder visible si menu ouvert */
+.options-btn:hover { color: #fff; background-color: rgba(255, 255, 255, 0.1); }
+
+/* Menu Supprimer */
+.delete-menu {
+  position: absolute; right: 8px; top: 30px; background-color: #3f0e40; /* Violet plus foncé */
+  border-radius: 6px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); padding: 5px;
+  z-index: 10; width: auto; min-width: 120px; border: 1px solid #522653; /* Bordure menu */
+}
+.delete-menu-btn {
+  display: flex; align-items: center; gap: 8px; background: none; border: none;
+  color: #ff9b9b; /* Rouge clair */ cursor: pointer; padding: 7px 10px; width: 100%; text-align: left;
+  border-radius: 4px; font-size: 0.875em; white-space: nowrap;
+}
+.delete-menu-btn:hover { background-color: rgba(255, 155, 155, 0.15); } /* Fond rouge léger */
+.delete-menu-btn span { font-size: 1.1em; }
+
+.no-history { color: rgba(255, 255, 255, 0.5); font-style: italic; font-size: 0.85em; text-align: center; margin-top: 25px; padding: 0 10px; }
+
+/* Bouton Déconnexion */
+.logout-btn {
+  display: flex; align-items: center; gap: 8px; width: 100%; margin: 0;
+  padding: 12px 20px; background-color: transparent; border: none;
+  border-top: 1px solid var(--sidebar-border); border-radius: 0; cursor: pointer;
+  font-size: 0.9em; font-weight: 500; /* Medium */ color: var(--sidebar-text); text-align: left;
+  transition: background-color 0.15s ease;
+}
+.logout-btn:hover { background-color: var(--sidebar-hover-bg); }
+
+/* ========================================= */
+/* --- Zone de Chat Principale --- */
+/* ========================================= */
+.main-chat-area {
+  flex-grow: 1; display: flex; flex-direction: column;
+  background-color: var(--bg-app); height: 100%; box-sizing: border-box; overflow: hidden;
+}
+
+.chat-window {
+  flex-grow: 1; overflow-y: auto; padding: 25px 5%; /* Moins de padding latéral */ display: flex;
+  flex-direction: column; gap: 15px; /* Moins d'espace */ background-color: var(--bg-app);
+}
+/* Scrollbar */
+.chat-window::-webkit-scrollbar { width: 8px; }
+.chat-window::-webkit-scrollbar-thumb { background: #d1d1d1; border-radius: 8px;} /* Gris clair */
+.chat-window::-webkit-scrollbar-thumb:hover { background: #b1b1b1; }
+.chat-window::-webkit-scrollbar-track { background: #f1f1f1; } /* Fond piste */
+
+/* --- Styles Bulles de Message --- */
+.message-bubble {
+  width: auto; /* --- LARGEUR ADAPTATIVE --- */
+  max-width: 75%; /* Limite la largeur max */
+  /* --- FIN LARGEUR ADAPTATIVE --- */
+  padding: 10px 15px; /* Padding réduit */ border-radius: 8px; line-height: 1.5; word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); /* Ombre légère */
+  opacity: 0; transform: translateY(5px); animation: fadeInBubble 0.3s ease-out forwards;
+}
+@keyframes fadeInBubble { to { opacity: 1; transform: translateY(0); } }
+
+/* Bulle Utilisateur */
+.message-bubble.user {
+  background: var(--user-bubble-bg); color: var(--user-bubble-text);
+  align-self: flex-end; margin-left: auto;
+}
+
+/* Bulle Bot */
+.message-bubble.assistant {
+  background-color: var(--bot-bubble-bg); color: var(--bot-bubble-text);
+  align-self: flex-start; margin-right: auto;
+  border: 1px solid var(--border-color); box-shadow: none;
+}
+
+/* Styles Markdown */
+/* ... (Garder les styles Markdown précédents - p, strong, em, a, code, pre) ... */
+.message-bubble p { margin: 0 0 0.5em 0; line-height: 1.5; }
+.message-bubble p:last-child { margin-bottom: 0; }
+.message-bubble strong { font-weight: 600; }
+.message-bubble em { font-style: italic; }
+.message-bubble a { color: var(--link-color); font-weight: 500; text-decoration: none; }
+.message-bubble a:hover { text-decoration: underline; }
+.message-bubble.user a { color: #cce5ff; }
+
+.message-bubble code { background-color: rgba(0, 0, 0, 0.05); border-radius: 4px; padding: 0.2em 0.4em; font-size: 0.875em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; border: 1px solid rgba(0, 0, 0, 0.08); }
+.message-bubble pre { background-color: #f1f3f5; color: #1c1e21; border-radius: 6px; padding: 12px; overflow-x: auto; font-size: 0.875em; margin: 1em 0; border: 1px solid var(--border-color); }
+.message-bubble pre code { background-color: transparent; padding: 0; border: none; color: inherit; }
+
+
+/* Indicateur Chargement */
+/* ... (Garder styles .loading et @keyframes typing) ... */
+.message-bubble.loading { padding: 15px 18px; display: flex; align-items: center; background-color: var(--bot-bubble-bg); border: 1px solid var(--border-color); }
+.message-bubble.loading span { display: inline-block; width: 7px; height: 7px; margin: 0 1.5px; background-color: var(--text-secondary); border-radius: 50%; opacity: 0.4; animation: typing 1.2s infinite ease-in-out; }
+.message-bubble.loading span:nth-child(1) { animation-delay: 0s; } .message-bubble.loading span:nth-child(2) { animation-delay: 0.15s; } .message-bubble.loading span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes typing { 0%, 100% { opacity: 0.4; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-3px); } }
+
+/* Erreur Chat */
+.chat-error { text-align: center; padding: 10px; color: var(--error-color); background-color: rgba(215, 58, 73, 0.05); border: 1px solid rgba(215, 58, 73, 0.2); border-radius: 6px; margin: 10px auto; max-width: 80%; font-size: 0.9em; }
+
+/* ========================================= */
+/* --- Zone d'Input Message --- */
+/* ========================================= */
+
+.message-input-container {
+  display: flex;
+  justify-content: center; /* CENTRE LES ÉLÉMENTS HORIZONTALEMENT */
+  align-items: center; /* Alignement vertical */
+  padding: 15px 5%;   /* Padding réduit pour laisser plus de place au centre */
+  border-top: 1px solid var(--border-color);
+  background-color: #fcfcfd; /* Fond très légèrement gris */
+  flex-shrink: 0;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+/* Bouton Envoyer (à gauche) */
+.message-input-container button {
+ order: 2; /* Le bouton vient en second */
+  padding: 8px 14px; /* Padding ajusté */
+  background-color: var(--button-primary-bg);
+  color: white;
+  border: none;
+  border-radius: 8px; /* Match textarea */
+  cursor: pointer;
+  font-size: 0.9em; /* Ajuster taille */
+  font-weight: 500;
+  line-height: 1.5;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.message-input-container button:hover { background-color: var(--button-primary-hover-bg); }
+.message-input-container button:active { transform: scale(0.98); }
+.message-input-container button:disabled { background-color: #a3cef0; cursor: not-allowed; }
+
+/* Zone de texte (à droite) */
+.message-input-container textarea {
+ order: 1; /* Le textarea vient en premier */
+  flex-grow: 1; /* Prend l'espace disponible */
+  width: 600px; /* Limite la largeur max de l'input */
+  border: 1px solid var(--border-color); /* Remettre la bordure */
+  border-radius: 8px;
+  padding: 9px 14px; /* Padding ajusté */
+  resize: none;
+  font-size: 0.95rem; /* Ajuster taille */
+  line-height: 1.5;
+  height: 50px; /* HAUTEUR FIXE */
+  overflow-y: auto;
+  margin-right: 10px; /* Espace AVANT le bouton */
+  background-color: var(--bg-app); /* Fond blanc */
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+  box-shadow: none; /* Enlever shadow interne */
+  box-sizing: border-box;
+}
+.message-input-container textarea:focus {
+  outline: none;
+  border-color: var(--button-primary-bg);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+/* Scrollbar */
+.message-input-container button:hover { background-color: var(--button-primary-hover-bg); }
+.message-input-container button:active { transform: scale(0.98); }
+.message-input-container button:disabled { background-color: #a3cef0; cursor: not-allowed; }
+
+/* ... (Garder le reste du CSS pour .message-bubble etc.) ... */
+
+/* Assure-toi que cette règle existe toujours pour l'alignement des messages utilisateur */
+.message-bubble.user {
+  background: var(--user-bubble-bg);
+  color: var(--user-bubble-text);
+  align-self: flex-end; /* ALIGNE À DROITE */
+  margin-left: auto;   /* Force l'alignement */
+  /* width: 70%; /* Si tu avais une largeur fixe, vérifie qu'elle est toujours là */ 
+}
