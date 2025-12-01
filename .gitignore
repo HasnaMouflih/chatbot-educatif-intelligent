@@ -5,9 +5,19 @@
 
 *.zip
 *.xlsx
-
-
+/notebooks/:0.26.0
+/notebooks/.ipynb_checkpoints/
+/notebooks/checkpoints_temp/
 # OS & IDE
 __pycache__/
 .vscode/
 .DS_Store
+
+env/
+.venv/
+venv/
+.python-version
+
+
+src/raq_model/
+src/
