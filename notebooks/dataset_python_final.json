@@ -1,0 +1,3659 @@
+{
+  "version": "v2.0",
+  "data": [
+    {
+      "title": "Doc_Python_Part_1",
+      "paragraphs": [
+        {
+          "context": "Python est le langage parfait pour vous.",
+          "qas": [
+            {
+              "id": "427340452924609085",
+              "question": "Qu'est-ce que Python ?",
+              "answers": [
+                {
+                  "text": "le langage parfait pour vous",
+                  "answer_start": 11
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_1",
+      "paragraphs": [
+        {
+          "context": "Python vous permet de découper votre programme en modules qui peuvent être réutilisés dans d'autres programmes Python. Il est fourni avec une grande variété de modules standards que vous pouvez utiliser comme base de vos programmes, ou comme exemples pour apprendre à programmer. Certains de ces modules donnent accès aux entrées/sorties, aux appels système, aux connecteurs réseaux et même aux outils comme Tk pour créer des interfaces graphiques.",
+          "qas": [
+            {
+              "id": "7773059698906903447",
+              "question": "Que permet de faire Python vous ?",
+              "answers": [
+                {
+                  "text": "permet de découper votre programme en modules qui peuvent être réutilisés dans d'autres programmes Python",
+                  "answer_start": 12
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Cette fonctionnalité est surtout intéressante pour couper des chaînes trop longues :",
+          "qas": [
+            {
+              "id": "4352884310798596253",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cette fonctionnalité est surtout intéressante pour couper des chaînes trop longues :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Cela ne fonctionne cependant qu'avec les chaînes littérales, pas avec les variables ni les expressions :",
+          "qas": [
+            {
+              "id": "4352884310798596253",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cela ne fonctionne cependant qu'avec les chaînes littérales, pas avec les variables ni les expressions :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "La fonction native len() renvoie la longueur d'une chaîne :",
+          "qas": [
+            {
+              "id": "4352884310798596253",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La fonction native len() renvoie la longueur d'une chaîne :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Comme les chaînes de caractères (et toute autre type de sequence), les listes peuvent être indicées et découpées :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Comme les chaînes de caractères (et toute autre type de sequence), les listes peuvent être indicées et découpées :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Les listes gèrent aussi les opérations comme les concaténations :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Les listes gèrent aussi les opérations comme les concaténations :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Mais à la différence des chaînes qui sont immuables, les listes sont mutables : il est possible de modifier leur contenu :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Mais à la différence des chaînes qui sont immuables, les listes sont mutables : il est possible de modifier leur contenu :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Toutes les opérations par tranches renvoient une nouvelle liste contenant les éléments demandés. Cela signifie que l'opération suivante renvoie une copie (superficielle) de la liste :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Toutes les opérations par tranches renvoient une nouvelle liste contenant les éléments demandés. Cela signifie que l'opération suivante renvoie une copie (superficielle) de la liste :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Des affectations de tranches sont également possibles, ce qui peut même modifier la taille de la liste ou la vider complètement :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Des affectations de tranches sont également possibles, ce qui peut même modifier la taille de la liste ou la vider complètement :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "La primitive len() s'applique aussi aux listes :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "La primitive len() s'applique aussi aux listes :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Il est possible d'imbriquer des listes (c.-à-d. créer des listes contenant d'autres listes). Par exemple :",
+          "qas": [
+            {
+              "id": "3102665809242778155",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Il est possible d'imbriquer des listes (c.-à-d. créer des listes contenant d'autres listes). Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_2",
+      "paragraphs": [
+        {
+          "context": "Cet exemple introduit plusieurs nouvelles fonctionnalités.",
+          "qas": [
+            {
+              "id": "4352884310798596253",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cet exemple introduit plusieurs nouvelles fonctionnalités.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Si vous devez itérer sur une suite de nombres, la fonction native range() est faite pour cela. Elle génère des suites arithmétiques :",
+          "qas": [
+            {
+              "id": "2247785102875341663",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Si vous devez itérer sur une suite de nombres, la fonction native range() est faite pour cela. Elle génère des suites arithmétiques :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Pour itérer sur les indices d'une séquence, on peut combiner les fonctions range() et len() :",
+          "qas": [
+            {
+              "id": "5532287368224013927",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pour itérer sur les indices d'une séquence, on peut combiner les fonctions range() et len() :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Cependant, dans la plupart des cas, il est plus pratique d'utiliser la fonction enumerate(). Voyez pour cela Techniques de boucles.",
+          "qas": [
+            {
+              "id": "5532287368224013927",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cependant, dans la plupart des cas, il est plus pratique d'utiliser la fonction enumerate(). Voyez pour cela Techniques de boucles.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Plus loin nous voyons d'autres fonctions qui donnent des itérables ou en prennent en paramètre. De plus amples détails sur list() sont donnés dans Structures de données.",
+          "qas": [
+            {
+              "id": "5532287368224013927",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Plus loin nous voyons d'autres fonctions qui donnent des itérables ou en prennent en paramètre. De plus amples détails sur list() sont donnés dans Structures de données.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "L'instruction break interrompt la boucle for ou while la plus profonde.",
+          "qas": [
+            {
+              "id": "2463554425037284287",
+              "question": "Que peux-tu dire sur : boucle for ?",
+              "answers": [
+                {
+                  "text": "L'instruction break interrompt la boucle for ou while la plus profonde.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Dans une boucle for ou while, l'instruction break peut être couplée à la clause else. Si la boucle finit sans exécuter le break, alors la clause else s'exécute.",
+          "qas": [
+            {
+              "id": "2463554425037284287",
+              "question": "Que peux-tu dire sur : boucle for ?",
+              "answers": [
+                {
+                  "text": "Dans une boucle for ou while, l'instruction break peut être couplée à la clause else. Si la boucle finit sans exécuter le break, alors la clause else s'exécute.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Dans une boucle for, la clause else s'exécute après l'exécution de la dernière itération, c'est-à-dire uniquement si la boucle n'a pas été interrompue.",
+          "qas": [
+            {
+              "id": "2463554425037284287",
+              "question": "Que peux-tu dire sur : boucle for ?",
+              "answers": [
+                {
+                  "text": "Dans une boucle for, la clause else s'exécute après l'exécution de la dernière itération, c'est-à-dire uniquement si la boucle n'a pas été interrompue.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Un exemple est donné dans la boucle for ci-dessous, qui cherche des nombres premiers :",
+          "qas": [
+            {
+              "id": "2463554425037284287",
+              "question": "Que peux-tu dire sur : boucle for ?",
+              "answers": [
+                {
+                  "text": "Un exemple est donné dans la boucle for ci-dessous, qui cherche des nombres premiers :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "(Oui, ce code est correct. Regardez attentivement : la clause else est rattachée à la boucle for, et non à l'instruction if.)",
+          "qas": [
+            {
+              "id": "2463554425037284287",
+              "question": "Que peux-tu dire sur : boucle for ?",
+              "answers": [
+                {
+                  "text": "(Oui, ce code est correct. Regardez attentivement : la clause else est rattachée à la boucle for, et non à l'instruction if.)",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "On utilise couramment cette instruction pour créer des classes minimales :",
+          "qas": [
+            {
+              "id": "4146142870838503276",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "On utilise couramment cette instruction pour créer des classes minimales :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "On peut imbriquer les filtres autant que de besoin. Ainsi, on peut lire une courte liste de points, avec __match_args__, comme ceci :",
+          "qas": [
+            {
+              "id": "5406820680401374166",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "On peut imbriquer les filtres autant que de besoin. Ainsi, on peut lire une courte liste de points, avec __match_args__, comme ceci :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "On peut créer une fonction qui écrit la suite de Fibonacci jusqu'à une limite imposée :",
+          "qas": [
+            {
+              "id": "5073907405567572893",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "On peut créer une fonction qui écrit la suite de Fibonacci jusqu'à une limite imposée :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Il est facile d'écrire une fonction qui renvoie une liste de la série de Fibonacci au lieu de l'afficher :",
+          "qas": [
+            {
+              "id": "6483969441262313993",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Il est facile d'écrire une fonction qui renvoie une liste de la série de Fibonacci au lieu de l'afficher :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Il est facile d'écrire une fonction qui renvoie une liste de la série de Fibonacci au lieu de l'afficher :",
+          "qas": [
+            {
+              "id": "9157941170621140034",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Il est facile d'écrire une fonction qui renvoie une liste de la série de Fibonacci au lieu de l'afficher :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Cet exemple, comme d'habitude, illustre de nouvelles fonctionnalités de Python :",
+          "qas": [
+            {
+              "id": "9157941170621140034",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cet exemple, comme d'habitude, illustre de nouvelles fonctionnalités de Python :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "l'instruction return provoque la sortie de la fonction en renvoyant une valeur. return sans expression en paramètre renvoie None. Arriver à la fin d'une fonction renvoie également None ;",
+          "qas": [
+            {
+              "id": "2561355573383187141",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "l'instruction return provoque la sortie de la fonction en renvoyant une valeur. return sans expression en paramètre renvoie None. Arriver à la fin d'une fonction renvoie également None ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Il est également possible de définir des fonctions avec un nombre variable d'arguments. Trois syntaxes peuvent être utilisées, éventuellement combinées.",
+          "qas": [
+            {
+              "id": "2561355573383187141",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Il est également possible de définir des fonctions avec un nombre variable d'arguments. Trois syntaxes peuvent être utilisées, éventuellement combinées.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Cette fonction peut être appelée de plusieurs façons :",
+          "qas": [
+            {
+              "id": "2561355573383187141",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Cette fonction peut être appelée de plusieurs façons :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Les valeurs par défaut sont évaluées lors de la définition de la fonction dans la portée de la définition, de telle sorte que",
+          "qas": [
+            {
+              "id": "6592784994418650480",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les valeurs par défaut sont évaluées lors de la définition de la fonction dans la portée de la définition, de telle sorte que",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Si vous ne voulez pas que cette valeur par défaut soit partagée entre des appels successifs, vous pouvez écrire la fonction de cette façon :",
+          "qas": [
+            {
+              "id": "6592784994418650480",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Si vous ne voulez pas que cette valeur par défaut soit partagée entre des appels successifs, vous pouvez écrire la fonction de cette façon :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Les fonctions peuvent également être appelées en utilisant des arguments nommés sous la forme kwarg=value. Par exemple, la fonction suivante :",
+          "qas": [
+            {
+              "id": "6592784994418650480",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les fonctions peuvent également être appelées en utilisant des arguments nommés sous la forme kwarg=value. Par exemple, la fonction suivante :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "accepte un argument obligatoire (voltage) et trois arguments facultatifs (state, action et type). Cette fonction peut être appelée de n'importe laquelle des façons suivantes :",
+          "qas": [
+            {
+              "id": "6592784994418650480",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "accepte un argument obligatoire (voltage) et trois arguments facultatifs (state, action et type). Cette fonction peut être appelée de n'importe laquelle des façons suivantes :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Notez que Python garantit que l'ordre d'affichage des arguments est le même que l'ordre dans lesquels ils sont fournis lors de l'appel à la fonction.",
+          "qas": [
+            {
+              "id": "5062822527438742447",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Notez que Python garantit que l'ordre d'affichage des arguments est le même que l'ordre dans lesquels ils sont fournis lors de l'appel à la fonction.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Voici à quoi ressemble une définition de fonction :",
+          "qas": [
+            {
+              "id": "5062822527438742447",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Voici à quoi ressemble une définition de fonction :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Si / et * ne sont pas présents dans la définition de fonction, les arguments peuvent être passés à une fonction par position ou par nommés.",
+          "qas": [
+            {
+              "id": "5062822527438742447",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Si / et * ne sont pas présents dans la définition de fonction, les arguments peuvent être passés à une fonction par position ou par nommés.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Considérons l'exemple suivant de définitions de fonctions en portant une attention particulière aux marqueurs / et * :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Considérons l'exemple suivant de définitions de fonctions en portant une attention particulière aux marqueurs / et * :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "La première définition de fonction, standard_arg, la forme la plus familière, n'impose aucune restriction sur la convention d'appel et les arguments peuvent être passés par position ou nommés :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La première définition de fonction, standard_arg, la forme la plus familière, n'impose aucune restriction sur la convention d'appel et les arguments peuvent être passés par position ou nommés :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "La deuxième fonction pos_only_arg restreint le passage aux seuls arguments par position car il y a un / dans la définition de fonction :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La deuxième fonction pos_only_arg restreint le passage aux seuls arguments par position car il y a un / dans la définition de fonction :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "La troisième fonction kwd_only_arg n'autorise que les arguments nommés comme l'indique le * dans la définition de fonction :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La troisième fonction kwd_only_arg n'autorise que les arguments nommés comme l'indique le * dans la définition de fonction :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Et la dernière utilise les trois conventions d'appel dans la même définition de fonction :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Et la dernière utilise les trois conventions d'appel dans la même définition de fonction :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Enfin, considérons cette définition de fonction qui a une collision potentielle entre l'argument positionnel name et **kwds qui a name comme mot-clé :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Enfin, considérons cette définition de fonction qui a une collision potentielle entre l'argument positionnel name et **kwds qui a name comme mot-clé :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Le cas d'utilisation détermine les paramètres à utiliser dans la définition de fonction :",
+          "qas": [
+            {
+              "id": "4519271009314981145",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Le cas d'utilisation détermine les paramètres à utiliser dans la définition de fonction :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "De la même façon, les dictionnaires peuvent fournir des arguments nommés en utilisant l'opérateur ** :",
+          "qas": [
+            {
+              "id": "377684673751957727",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "De la même façon, les dictionnaires peuvent fournir des arguments nommés en utilisant l'opérateur ** :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "Les annotations de fonction sont des métadonnées optionnelles décrivant les types utilisés par une fonction définie par l'utilisateur (voir les PEP 3107 et PEP 484 pour plus d'informations).",
+          "qas": [
+            {
+              "id": "7984502415654218911",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les annotations de fonction sont des métadonnées optionnelles décrivant les types utilisés par une fonction définie par l'utilisateur (voir les PEP 3107 et PEP 484 pour plus d'informations).",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "utilisez des lignes vides pour séparer les fonctions et les classes, ou pour scinder de gros blocs de code à l'intérieur de fonctions ;",
+          "qas": [
+            {
+              "id": "8429976917735647471",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "utilisez des lignes vides pour séparer les fonctions et les classes, ou pour scinder de gros blocs de code à l'intérieur de fonctions ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_3",
+      "paragraphs": [
+        {
+          "context": "utilisez des lignes vides pour séparer les fonctions et les classes, ou pour scinder de gros blocs de code à l'intérieur de fonctions ;",
+          "qas": [
+            {
+              "id": "615364050096417213",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "utilisez des lignes vides pour séparer les fonctions et les classes, ou pour scinder de gros blocs de code à l'intérieur de fonctions ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Supprime de la liste le premier élément dont la valeur est égale à x. Une exception ValueError est levée s'il n'existe aucun élément avec cette valeur.",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Supprime de la liste le premier élément dont la valeur est égale à x. Une exception ValueError est levée s'il n'existe aucun élément avec cette valeur.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Supprime de la liste le premier élément dont la valeur est égale à x. Une exception ValueError est levée s'il n'existe aucun élément avec cette valeur.",
+          "qas": [
+            {
+              "id": "3399432773275334362",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Supprime de la liste le premier élément dont la valeur est égale à x. Une exception ValueError est levée s'il n'existe aucun élément avec cette valeur.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Renvoie le nombre d'éléments ayant la valeur x dans la liste.",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Renvoie le nombre d'éléments ayant la valeur x dans la liste.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Ordonne les éléments dans la liste (les arguments peuvent personnaliser l'ordonnancement, voir sorted() pour leur explication).",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Ordonne les éléments dans la liste (les arguments peuvent personnaliser l'ordonnancement, voir sorted() pour leur explication).",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Inverse l'ordre des éléments dans la liste.",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Inverse l'ordre des éléments dans la liste.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "L'exemple suivant utilise la plupart des méthodes des listes :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "L'exemple suivant utilise la plupart des méthodes des listes :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Pour implémenter une file, utilisez plutôt la classe collections.deque qui a été conçue spécialement pour réaliser rapidement les opérations d'ajout et de retrait aux deux extrémités. Par exemple :",
+          "qas": [
+            {
+              "id": "8015040758177583220",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Pour implémenter une file, utilisez plutôt la classe collections.deque qui a été conçue spécialement pour réaliser rapidement les opérations d'ajout et de retrait aux deux extrémités. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Par exemple, supposons que l'on veuille créer une liste de carrés, comme :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Par exemple, supposons que l'on veuille créer une liste de carrés, comme :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Notez que cela crée (ou remplace) une variable nommée x qui existe toujours après l'exécution de la boucle. On peut calculer une liste de carrés sans effet de bord avec :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Notez que cela crée (ou remplace) une variable nommée x qui existe toujours après l'exécution de la boucle. On peut calculer une liste de carrés sans effet de bord avec :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Les listes en compréhension peuvent contenir des expressions complexes et des fonctions imbriquées :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Les listes en compréhension peuvent contenir des expressions complexes et des fonctions imbriquées :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Les listes en compréhension peuvent contenir des expressions complexes et des fonctions imbriquées :",
+          "qas": [
+            {
+              "id": "8071380372148708376",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les listes en compréhension peuvent contenir des expressions complexes et des fonctions imbriquées :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "La première expression dans une liste en compréhension peut être n'importe quelle expression, y compris une autre liste en compréhension.",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "La première expression dans une liste en compréhension peut être n'importe quelle expression, y compris une autre liste en compréhension.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Voyez l'exemple suivant d'une matrice de 3 par 4, implémentée sous la forme de 3 listes de 4 éléments :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Voyez l'exemple suivant d'une matrice de 3 par 4, implémentée sous la forme de 3 listes de 4 éléments :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Cette compréhension de liste transpose les lignes et les colonnes :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Cette compréhension de liste transpose les lignes et les colonnes :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Comme nous l'avons vu dans la section précédente, la liste en compréhension à l'intérieur est évaluée dans le contexte de l'instruction for qui la suit, donc cet exemple est équivalent à :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Comme nous l'avons vu dans la section précédente, la liste en compréhension à l'intérieur est évaluée dans le contexte de l'instruction for qui la suit, donc cet exemple est équivalent à :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Dans des cas concrets, il est toujours préférable d'utiliser des fonctions natives plutôt que des instructions de contrôle de flux complexes. La fonction zip() fait dans ce cas un excellent travail :",
+          "qas": [
+            {
+              "id": "8071380372148708376",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Dans des cas concrets, il est toujours préférable d'utiliser des fonctions natives plutôt que des instructions de contrôle de flux complexes. La fonction zip() fait dans ce cas un excellent travail :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Voir Séparation des listes d'arguments pour plus de détails sur l'astérisque de cette ligne.",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Voir Séparation des listes d'arguments pour plus de détails sur l'astérisque de cette ligne.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "À partir de là, référencer le nom a est une erreur (au moins jusqu'à ce qu'une autre valeur lui soit affectée). Vous trouverez d'autres utilisations de la fonction del dans la suite de ce tutoriel.",
+          "qas": [
+            {
+              "id": "8071380372148708376",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "À partir de là, référencer le nom a est une erreur (au moins jusqu'à ce qu'une autre valeur lui soit affectée). Vous trouverez d'autres utilisations de la fonction del dans la suite de ce tutoriel.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Tout comme pour les listes en compréhension, il est possible d'écrire des ensembles en compréhension :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Tout comme pour les listes en compréhension, il est possible d'écrire des ensembles en compréhension :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Voici un petit exemple utilisant un dictionnaire :",
+          "qas": [
+            {
+              "id": "5112974122755538855",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Voici un petit exemple utilisant un dictionnaire :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Le constructeur dict() fabrique un dictionnaire directement à partir d'une liste de paires clé-valeur stockées sous la forme de n-uplets :",
+          "qas": [
+            {
+              "id": "5558968242470550416",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Le constructeur dict() fabrique un dictionnaire directement à partir d'une liste de paires clé-valeur stockées sous la forme de n-uplets :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Le constructeur dict() fabrique un dictionnaire directement à partir d'une liste de paires clé-valeur stockées sous la forme de n-uplets :",
+          "qas": [
+            {
+              "id": "5112974122755538855",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Le constructeur dict() fabrique un dictionnaire directement à partir d'une liste de paires clé-valeur stockées sous la forme de n-uplets :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "De plus, il est possible de créer des dictionnaires en compréhension depuis un jeu de clés et valeurs :",
+          "qas": [
+            {
+              "id": "5112974122755538855",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "De plus, il est possible de créer des dictionnaires en compréhension depuis un jeu de clés et valeurs :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Lorsque vous faites une boucle sur une séquence, la position et la valeur associée peuvent être récupérées en même temps en utilisant la fonction enumerate().",
+          "qas": [
+            {
+              "id": "8071380372148708376",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Lorsque vous faites une boucle sur une séquence, la position et la valeur associée peuvent être récupérées en même temps en utilisant la fonction enumerate().",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Pour faire une boucle sur deux séquences ou plus en même temps, les éléments peuvent être associés en utilisant la fonction zip()",
+          "qas": [
+            {
+              "id": "8071380372148708376",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pour faire une boucle sur deux séquences ou plus en même temps, les éléments peuvent être associés en utilisant la fonction zip()",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Pour faire une boucle en sens inverse sur une séquence, commencez par spécifier la séquence dans son ordre normal, puis appliquez la fonction reversed()",
+          "qas": [
+            {
+              "id": "6480612813631177966",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pour faire une boucle en sens inverse sur une séquence, commencez par spécifier la séquence dans son ordre normal, puis appliquez la fonction reversed()",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Pour faire une boucle sur une séquence de manière ordonnée, utilisez la fonction sorted() qui renvoie une nouvelle liste ordonnée sans altérer la source",
+          "qas": [
+            {
+              "id": "8550251851499139104",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Pour faire une boucle sur une séquence de manière ordonnée, utilisez la fonction sorted() qui renvoie une nouvelle liste ordonnée sans altérer la source",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Pour faire une boucle sur une séquence de manière ordonnée, utilisez la fonction sorted() qui renvoie une nouvelle liste ordonnée sans altérer la source",
+          "qas": [
+            {
+              "id": "6480612813631177966",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pour faire une boucle sur une séquence de manière ordonnée, utilisez la fonction sorted() qui renvoie une nouvelle liste ordonnée sans altérer la source",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_4",
+      "paragraphs": [
+        {
+          "context": "Il est parfois tentant de modifier une liste pendant que l'on itère dessus. Il est souvent plus simple et plus sûr de créer une nouvelle liste à la place.",
+          "qas": [
+            {
+              "id": "8550251851499139104",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Il est parfois tentant de modifier une liste pendant que l'on itère dessus. Il est souvent plus simple et plus sûr de créer une nouvelle liste à la place.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Pour gérer cela, Python vous permet de placer des définitions dans un fichier et de les utiliser dans un script ou une session interactive. Un tel fichier est appelé un module et les définitions d'un module peuvent être importées dans un autre module ou dans le module main (qui est le module qui contient vos variables et définitions lors de l'exécution d'un script au niveau le plus haut ou en mode interactif).",
+          "qas": [
+            {
+              "id": "4434229052288592777",
+              "question": "Que permet de faire Pour gérer cela, Python vous ?",
+              "answers": [
+                {
+                  "text": "permet de placer des définitions dans un fichier et de les utiliser dans un script ou une session interactive",
+                  "answer_start": 29
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Un module est un fichier contenant des définitions et des instructions. Son nom de fichier est le nom du module suffixé de .py. À l'intérieur d'un module, son propre nom est accessible par la variable __name__. Par exemple, prenez votre éditeur favori et créez un fichier fibo.py dans le répertoire courant qui contient :",
+          "qas": [
+            {
+              "id": "8623785907040641631",
+              "question": "Qu'est-ce que Un module ?",
+              "answers": [
+                {
+                  "text": "un fichier contenant des définitions et des instructions",
+                  "answer_start": 14
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Si vous avez l'intention d'utiliser souvent une fonction, il est possible de lui assigner un nom local :",
+          "qas": [
+            {
+              "id": "3981197074077204925",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Si vous avez l'intention d'utiliser souvent une fonction, il est possible de lui assigner un nom local :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "PYTHONPATH (une liste de dossiers, utilisant la même syntaxe que la variable shell PATH) ;",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "PYTHONPATH (une liste de dossiers, utilisant la même syntaxe que la variable shell PATH) ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "La fonction interne dir() est utilisée pour trouver quels noms sont définis par un module. Elle donne une liste de chaînes classées par ordre lexicographique :",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "La fonction interne dir() est utilisée pour trouver quels noms sont définis par un module. Elle donne une liste de chaînes classées par ordre lexicographique :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "La fonction interne dir() est utilisée pour trouver quels noms sont définis par un module. Elle donne une liste de chaînes classées par ordre lexicographique :",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La fonction interne dir() est utilisée pour trouver quels noms sont définis par un module. Elle donne une liste de chaînes classées par ordre lexicographique :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Sans paramètre, dir() liste les noms actuellement définis :",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Sans paramètre, dir() liste les noms actuellement définis :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Notez qu'elle liste tous les types de noms : les variables, fonctions, modules, etc.",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Notez qu'elle liste tous les types de noms : les variables, fonctions, modules, etc.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Notez qu'elle liste tous les types de noms : les variables, fonctions, modules, etc.",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Notez qu'elle liste tous les types de noms : les variables, fonctions, modules, etc.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "dir() ne liste ni les fonctions primitives, ni les variables internes. Si vous voulez les lister, elles sont définies dans le module builtins :",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "dir() ne liste ni les fonctions primitives, ni les variables internes. Si vous voulez les lister, elles sont définies dans le module builtins :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "dir() ne liste ni les fonctions primitives, ni les variables internes. Si vous voulez les lister, elles sont définies dans le module builtins :",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "dir() ne liste ni les fonctions primitives, ni les variables internes. Si vous voulez les lister, elles sont définies dans le module builtins :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Une autre méthode consiste à importer la fonction ou la variable désirée directement :",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Une autre méthode consiste à importer la fonction ou la variable désirée directement :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Bien que cette fonctionnalité ne soit que rarement utile, elle peut servir à élargir la liste des modules trouvés dans un paquet.",
+          "qas": [
+            {
+              "id": "8311920910535707056",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Bien que cette fonctionnalité ne soit que rarement utile, elle peut servir à élargir la liste des modules trouvés dans un paquet.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "Bien que cette fonctionnalité ne soit que rarement utile, elle peut servir à élargir la liste des modules trouvés dans un paquet.",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Bien que cette fonctionnalité ne soit que rarement utile, elle peut servir à élargir la liste des modules trouvés dans un paquet.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_5",
+      "paragraphs": [
+        {
+          "context": "En réalité, la déclaration d'une fonction est elle-même une instruction ; son exécution ajoute le nom de la fonction dans l'espace de nommage global du module.",
+          "qas": [
+            {
+              "id": "1559054567983856814",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "En réalité, la déclaration d'une fonction est elle-même une instruction ; son exécution ajoute le nom de la fonction dans l'espace de nommage global du module.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "Vous pouvez obtenir le même résultat en passant le dictionnaire table comme des arguments nommés en utilisant la notation **",
+          "qas": [
+            {
+              "id": "7882491131123377502",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Vous pouvez obtenir le même résultat en passant le dictionnaire table comme des arguments nommés en utilisant la notation **",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "(Remarquez que l'espace séparant les colonnes vient de la manière dont print() fonctionne : il ajoute toujours des espaces entre ses arguments.)",
+          "qas": [
+            {
+              "id": "6238107665569072705",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "(Remarquez que l'espace séparant les colonnes vient de la manière dont print() fonctionne : il ajoute toujours des espaces entre ses arguments.)",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "La fonction open() renvoie un objet fichier et est le plus souvent utilisée avec deux arguments positionnels et un argument nommé : open(filename, mode, encoding=None)",
+          "qas": [
+            {
+              "id": "8365114539199988979",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La fonction open() renvoie un objet fichier et est le plus souvent utilisée avec deux arguments positionnels et un argument nommé : open(filename, mode, encoding=None)",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "Le premier argument est une chaîne contenant le nom du fichier. Le deuxième argument est une autre chaîne contenant quelques caractères décrivant la façon dont le fichier est utilisé. mode peut être 'r' quand le fichier n'est accédé qu'en lecture, 'w' en écriture seulement (un fichier existant portant le même nom sera alors écrasé) et 'a' ouvre le fichier en mode ajout (toute donnée écrite dans le fichier est automatiquement ajoutée à la fin). 'r+' ouvre le fichier en mode lecture/écriture. L'argument mode est optionnel, sa valeur par défaut est 'r'.",
+          "qas": [
+            {
+              "id": "4211049096168217702",
+              "question": "Qu'est-ce que Le premier argument ?",
+              "answers": [
+                {
+                  "text": "une chaîne contenant le nom du fichier",
+                  "answer_start": 24
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "Pour construire une liste avec toutes les lignes d'un fichier, il est aussi possible d'utiliser list(f) ou f.readlines().",
+          "qas": [
+            {
+              "id": "1053853113552894968",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Pour construire une liste avec toutes les lignes d'un fichier, il est aussi possible d'utiliser list(f) ou f.readlines().",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_6",
+      "paragraphs": [
+        {
+          "context": "Une variante de la fonction dumps(), nommée dump(), sérialise simplement l'objet donné vers un text file. Donc si f est un text file ouvert en écriture, il est possible de faire :",
+          "qas": [
+            {
+              "id": "5433374684708866593",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Une variante de la fonction dumps(), nommée dump(), sérialise simplement l'objet donné vers un text file. Donc si f est un text file ouvert en écriture, il est possible de faire :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Le reste de la ligne fournit plus de détails en fonction du type de l'exception et de ce qui l'a causée.",
+          "qas": [
+            {
+              "id": "3030938758685295929",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Le reste de la ligne fournit plus de détails en fonction du type de l'exception et de ce qui l'a causée.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Le reste de la ligne fournit plus de détails en fonction du type de l'exception et de ce qui l'a causée.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Le reste de la ligne fournit plus de détails en fonction du type de l'exception et de ce qui l'a causée.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Vous trouvez la liste des exceptions natives et leur signification dans Exceptions natives.",
+          "qas": [
+            {
+              "id": "3270555652552621404",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Vous trouvez la liste des exceptions natives et leur signification dans Exceptions natives.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Vous trouvez la liste des exceptions natives et leur signification dans Exceptions natives.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Vous trouvez la liste des exceptions natives et leur signification dans Exceptions natives.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "L'instruction try fonctionne comme ceci :",
+          "qas": [
+            {
+              "id": "3030938758685295929",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "L'instruction try fonctionne comme ceci :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "si aucune exception n'intervient, la clause except est sautée et l'exécution de l'instruction try est terminée.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "si aucune exception n'intervient, la clause except est sautée et l'exécution de l'instruction try est terminée.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Quand une exception intervient, une valeur peut lui être associée, que l'on appelle l'argument de l'exception. La présence de cet argument et son type dépendent du type de l'exception.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Quand une exception intervient, une valeur peut lui être associée, que l'on appelle l'argument de l'exception. La présence de cet argument et son type dépendent du type de l'exception.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "La sortie produite par __str__() de l'exception est affichée en dernière partie (« détail ») du message des exceptions qui ne sont pas gérées.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "La sortie produite par __str__() de l'exception est affichée en dernière partie (« détail ») du message des exceptions qui ne sont pas gérées.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "BaseException est la classe mère de toutes les exceptions. Une de ses sous-classes, Exception, est la classe mère de toutes les exceptions non fatales. Les exceptions qui ne sont pas des sous-classes de Exception ne sont normalement pas gérées, car elles sont utilisées pour indiquer que le programme doit se terminer. C'est le cas de SystemExit qui est levée par sys.exit() et KeyboardInterrupt qui est levée quand l'utilisateur souhaite interrompre le programme.",
+          "qas": [
+            {
+              "id": "9098009127436976147",
+              "question": "Qu'est-ce que BaseException ?",
+              "answers": [
+                {
+                  "text": "la classe mère de toutes les exceptions",
+                  "answer_start": 18
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "La manière la plus utilisée pour gérer une Exception consiste à afficher ou journaliser l'exception et ensuite la lever à nouveau afin de permettre à l'appelant de la gérer à son tour :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "La manière la plus utilisée pour gérer une Exception consiste à afficher ou journaliser l'exception et ensuite la lever à nouveau afin de permettre à l'appelant de la gérer à son tour :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "L'instruction raise permet au programmeur de déclencher une exception spécifique. Par exemple :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "L'instruction raise permet au programmeur de déclencher une exception spécifique. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Si vous avez besoin de savoir si une exception a été levée mais que vous n'avez pas intention de la gérer, une forme plus simple de l'instruction raise permet de propager l'exception :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Si vous avez besoin de savoir si une exception a été levée mais que vous n'avez pas intention de la gérer, une forme plus simple de l'instruction raise permet de propager l'exception :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Si une exception non gérée se produit à l'intérieur d'une section except, l'exception en cours de traitement est jointe à l'exception non gérée et incluse dans le message d'erreur :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Si une exception non gérée se produit à l'intérieur d'une section except, l'exception en cours de traitement est jointe à l'exception non gérée et incluse dans le message d'erreur :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Pour indiquer qu'une exception est la conséquence directe d'une autre, l'instruction raise autorise une clause facultative from :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Pour indiquer qu'une exception est la conséquence directe d'une autre, l'instruction raise autorise une clause facultative from :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Cela peut être utile lorsque vous transformez des exceptions. Par exemple :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Cela peut être utile lorsque vous transformez des exceptions. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Cela permet également de désactiver le chaînage automatique des exceptions à l'aide de l'idiome from None :",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Cela permet également de désactiver le chaînage automatique des exceptions à l'aide de l'idiome from None :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Pour plus d'informations sur les mécanismes de chaînage, voir Exceptions natives.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Pour plus d'informations sur les mécanismes de chaînage, voir Exceptions natives.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "La plupart des exceptions sont définies avec des noms qui se terminent par \"Error\", comme les exceptions standards.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "La plupart des exceptions sont définies avec des noms qui se terminent par \"Error\", comme les exceptions standards.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Beaucoup de modules standards définissent leurs propres exceptions pour signaler les erreurs possibles dans les fonctions qu'ils définissent.",
+          "qas": [
+            {
+              "id": "3030938758685295929",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Beaucoup de modules standards définissent leurs propres exceptions pour signaler les erreurs possibles dans les fonctions qu'ils définissent.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Beaucoup de modules standards définissent leurs propres exceptions pour signaler les erreurs possibles dans les fonctions qu'ils définissent.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Beaucoup de modules standards définissent leurs propres exceptions pour signaler les erreurs possibles dans les fonctions qu'ils définissent.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "Une exception peut se produire durant l'exécution d'une clause except ou else. Encore une fois, l'exception est reprise après que la clause finally a été exécutée.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "Une exception peut se produire durant l'exécution d'une clause except ou else. Encore une fois, l'exception est reprise après que la clause finally a été exécutée.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "L'idiome natif ExceptionGroup englobe une liste d'instances d'exceptions afin de pouvoir les lever en même temps. C'est une exception, et peut donc être interceptée comme toute autre exception.",
+          "qas": [
+            {
+              "id": "3270555652552621404",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "L'idiome natif ExceptionGroup englobe une liste d'instances d'exceptions afin de pouvoir les lever en même temps. C'est une exception, et peut donc être interceptée comme toute autre exception.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_7",
+      "paragraphs": [
+        {
+          "context": "L'idiome natif ExceptionGroup englobe une liste d'instances d'exceptions afin de pouvoir les lever en même temps. C'est une exception, et peut donc être interceptée comme toute autre exception.",
+          "qas": [
+            {
+              "id": "3892823794875337199",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "L'idiome natif ExceptionGroup englobe une liste d'instances d'exceptions afin de pouvoir les lever en même temps. C'est une exception, et peut donc être interceptée comme toute autre exception.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Les classes sont un moyen de réunir des données et des fonctionnalités. Créer une nouvelle classe crée un nouveau type d'objet et ainsi de nouvelles instances de ce type peuvent être construites. Chaque instance peut avoir ses propres attributs, ce qui définit son état. Une instance peut aussi avoir des méthodes (définies par la classe de l'instance) pour modifier son état.",
+          "qas": [
+            {
+              "id": "2621405657027789908",
+              "question": "Qu'est-ce que Les classes ?",
+              "answers": [
+                {
+                  "text": "un moyen de réunir des données et des fonctionnalités",
+                  "answer_start": 17
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Un espace de nommage est une table de correspondance entre des noms et des objets. La plupart des espaces de nommage sont actuellement implémentés sous forme de dictionnaires Python, mais ceci n'est normalement pas visible (sauf pour les performances) et peut changer dans le futur. Comme exemples d'espaces de nommage, nous pouvons citer les primitives (fonctions comme abs() et les noms des exceptions de base) ; les noms globaux dans un module ; et les noms locaux lors d'un appel de fonction. D'une certaine manière, l'ensemble des attributs d'un objet forme lui-même un espace de nommage. L'important à retenir concernant les espaces de nommage est qu'il n'y a absolument aucun lien entre les noms de différents espaces de nommage ; par exemple, deux modules différents peuvent définir une fonction maximize sans qu'il n'y ait de confusion. Les utilisateurs des modules doivent préfixer le nom de la fonction avec celui du module.",
+          "qas": [
+            {
+              "id": "7954364731974635504",
+              "question": "Qu'est-ce que Un espace de nommage ?",
+              "answers": [
+                {
+                  "text": "une table de correspondance entre des noms et des objets",
+                  "answer_start": 25
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "La portée est la zone textuelle d'un programme Python où un espace de nommage est directement accessible. « Directement accessible » signifie ici qu'une référence non qualifiée à un nom est cherchée dans l'espace de nommage.",
+          "qas": [
+            {
+              "id": "1779747598186107589",
+              "question": "Qu'est-ce que La portée ?",
+              "answers": [
+                {
+                  "text": "la zone textuelle d'un programme Python où un espace de nommage est directement accessible",
+                  "answer_start": 14
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "les portées des fonctions englobantes, qui sont consultées en commençant avec la portée englobante la plus proche, contiennent des noms non-locaux mais aussi non-globaux ;",
+          "qas": [
+            {
+              "id": "2073190322131257638",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "les portées des fonctions englobantes, qui sont consultées en commençant avec la portée englobante la plus proche, contiennent des noms non-locaux mais aussi non-globaux ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Le concept de classe introduit un peu de syntaxe nouvelle, trois nouveaux types d'objets ainsi que quelques nouveaux éléments de sémantique.",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Le concept de classe introduit un peu de syntaxe nouvelle, trois nouveaux types d'objets ainsi que quelques nouveaux éléments de sémantique.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "La forme la plus simple de définition d'une classe est la suivante :",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "La forme la plus simple de définition d'une classe est la suivante :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Les objets classes prennent en charge deux types d'opérations : des références à des attributs et l'instanciation.",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Les objets classes prennent en charge deux types d'opérations : des références à des attributs et l'instanciation.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "crée une nouvelle instance de la classe et affecte cet objet à la variable locale x.",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "crée une nouvelle instance de la classe et affecte cet objet à la variable locale x.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "La deuxième sorte d'attribut d'instance est une méthode. Une méthode est une fonction qui « appartient à » un objet.",
+          "qas": [
+            {
+              "id": "2073190322131257638",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "La deuxième sorte d'attribut d'instance est une méthode. Une méthode est une fonction qui « appartient à » un objet.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Une conception correcte de la classe est d'utiliser une variable d'instance à la place :",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Une conception correcte de la classe est d'utiliser une variable d'instance à la place :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Si le même nom d'attribut apparaît à la fois dans une instance et dans une classe, alors la recherche d'attribut donne la priorité à l'instance :",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Si le même nom d'attribut apparaît à la fois dans une instance et dans une classe, alors la recherche d'attribut donne la priorité à l'instance :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Tout objet fonction qui est un attribut de classe définit une méthode pour des instances de cette classe. Il n'est pas nécessaire que le texte de définition de la fonction soit dans la définition de la classe : il est possible d'affecter un objet fonction à une variable locale de la classe. Par exemple :",
+          "qas": [
+            {
+              "id": "3195712210151494063",
+              "question": "Qu'est-ce que Tout objet fonction qui ?",
+              "answers": [
+                {
+                  "text": "un attribut de classe définit une méthode pour des instances de cette classe",
+                  "answer_start": 28
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Toute valeur est un objet et a donc une classe (appelée aussi son type). Elle est stockée dans objet.__class__.",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Toute valeur est un objet et a donc une classe (appelée aussi son type). Elle est stockée dans objet.__class__.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Bien sûr, ce terme de \"classe\" ne serait pas utilisé s'il n'y avait pas d'héritage. La syntaxe pour définir une sous-classe est de cette forme :",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Bien sûr, ce terme de \"classe\" ne serait pas utilisé s'il n'y avait pas d'héritage. La syntaxe pour définir une sous-classe est de cette forme :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Python définit deux fonctions primitives pour gérer l'héritage :",
+          "qas": [
+            {
+              "id": "2073190322131257638",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Python définit deux fonctions primitives pour gérer l'héritage :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "utilisez isinstance() pour tester le type d'une instance : isinstance(obj, int) renvoie True seulement si obj.__class__ est égal à int ou à une autre classe dérivée de int ;",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "utilisez isinstance() pour tester le type d'une instance : isinstance(obj, int) renvoie True seulement si obj.__class__ est égal à int ou à une autre classe dérivée de int ;",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Python gère également une forme d'héritage multiple. Une définition de classe ayant plusieurs classes mères est de cette forme :",
+          "qas": [
+            {
+              "id": "3759801770623600956",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Python gère également une forme d'héritage multiple. Une définition de classe ayant plusieurs classes mères est de cette forme :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Ce changement de nom est utile pour permettre à des sous-classes de surcharger des méthodes sans casser les appels de méthodes à l'intérieur d'une classe. Par exemple :",
+          "qas": [
+            {
+              "id": "1316408122561408954",
+              "question": "Que peux-tu dire sur : classe ?",
+              "answers": [
+                {
+                  "text": "Ce changement de nom est utile pour permettre à des sous-classes de surcharger des méthodes sans casser les appels de méthodes à l'intérieur d'une classe. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Les objets méthode d'instance ont aussi des attributs : m.__self__ est l'instance de l’objet ayant la méthode m() et m.__func__ est l'objet fonction correspondant à la méthode.",
+          "qas": [
+            {
+              "id": "3801399326936591985",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les objets méthode d'instance ont aussi des attributs : m.__self__ est l'instance de l’objet ayant la méthode m() et m.__func__ est l'objet fonction correspondant à la méthode.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_8",
+      "paragraphs": [
+        {
+          "context": "Les générateurs sont des outils simples et puissants pour créer des itérateurs. Ils sont écrits comme des fonctions classiques mais utilisent l'instruction yield lorsqu'ils veulent renvoyer des données. À chaque fois qu'il est appelé par next(), le générateur reprend son exécution là où il s'était arrêté (en conservant tout son contexte d'exécution). Un exemple montre très bien combien les générateurs sont simples à créer :",
+          "qas": [
+            {
+              "id": "7867502027933668753",
+              "question": "Qu'est-ce que Les générateurs ?",
+              "answers": [
+                {
+                  "text": "des outils simples et puissants pour créer des itérateurs",
+                  "answer_start": 21
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Le module os propose des dizaines de fonctions pour interagir avec le système d'exploitation :",
+          "qas": [
+            {
+              "id": "5132781416061730023",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Le module os propose des dizaines de fonctions pour interagir avec le système d'exploitation :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Veillez bien à utiliser import os plutôt que from os import *, sinon os.open() cache la primitive open() qui fonctionne différemment.",
+          "qas": [
+            {
+              "id": "5132781416061730023",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Veillez bien à utiliser import os plutôt que from os import *, sinon os.open() cache la primitive open() qui fonctionne différemment.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Le module glob fournit une fonction pour construire des listes de fichiers à partir de motifs :",
+          "qas": [
+            {
+              "id": "1818273454605831975",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Le module glob fournit une fonction pour construire des listes de fichiers à partir de motifs :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Le module glob fournit une fonction pour construire des listes de fichiers à partir de motifs :",
+          "qas": [
+            {
+              "id": "5132781416061730023",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Le module glob fournit une fonction pour construire des listes de fichiers à partir de motifs :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Le module statistics permet de calculer des valeurs statistiques basiques (moyenne, médiane, variance…) :",
+          "qas": [
+            {
+              "id": "475864997472203830",
+              "question": "Que permet de faire Le module statistics ?",
+              "answers": [
+                {
+                  "text": "permet de calculer des valeurs statistiques basiques (moyenne, médiane, variance…) :",
+                  "answer_start": 21
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Python adopte le principe des \"piles fournies\". Vous pouvez le constater au travers des fonctionnalités évoluées et solides fournies par ses plus gros paquets. Par exemple :",
+          "qas": [
+            {
+              "id": "5132781416061730023",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Python adopte le principe des \"piles fournies\". Vous pouvez le constater au travers des fonctionnalités évoluées et solides fournies par ses plus gros paquets. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Les modules xmlrpc.client et xmlrpc.server permettent d'appeler des fonctions à distance quasiment sans effort. En dépit du nom des modules, aucune connaissance du XML n'est nécessaire.",
+          "qas": [
+            {
+              "id": "5132781416061730023",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Les modules xmlrpc.client et xmlrpc.server permettent d'appeler des fonctions à distance quasiment sans effort. En dépit du nom des modules, aucune connaissance du XML n'est nécessaire.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_9",
+      "paragraphs": [
+        {
+          "context": "Le paquet json permet de lire et d'écrire du JSON, format d'encodage de données répandu. Le module csv gère la lecture et l'écriture de données stockées sous forme de valeurs séparées par des virgules dans des fichiers (Comma-Separated Values en anglais), format typiquement interopérable avec les bases de données et les feuilles de calculs. Pour la lecture du XML, utilisez les paquets xml.etree.ElementTree, xml.dom et xml.sax. Combinés, ces modules et paquets simplifient grandement l'échange de données entre les applications Python et les autres outils.",
+          "qas": [
+            {
+              "id": "8271215151484636976",
+              "question": "Que permet de faire Le paquet json ?",
+              "answers": [
+                {
+                  "text": "permet de lire et d'écrire du JSON, format d'encodage de données répandu",
+                  "answer_start": 15
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pourquoi Python utilise des méthodes pour certaines fonctionnalités (ex : list.index()) mais des fonctions pour d'autres (ex : len(list)) ?",
+          "qas": [
+            {
+              "id": "7522650766310171347",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pourquoi Python utilise des méthodes pour certaines fonctionnalités (ex : list.index()) mais des fonctions pour d'autres (ex : len(list)) ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pourquoi join() est une méthode de chaîne plutôt qu'une méthode de liste ou de n-uplet ?",
+          "qas": [
+            {
+              "id": "2059183544044430279",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Pourquoi join() est une méthode de chaîne plutôt qu'une méthode de liste ou de n-uplet ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "À quel point les exceptions sont-elles rapides ?",
+          "qas": [
+            {
+              "id": "7939699088216453696",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "À quel point les exceptions sont-elles rapides ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Comment les listes sont-elles implémentées dans CPython ?",
+          "qas": [
+            {
+              "id": "2059183544044430279",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Comment les listes sont-elles implémentées dans CPython ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Comment les dictionnaires sont-ils implémentés dans CPython ?",
+          "qas": [
+            {
+              "id": "5041150307616922832",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Comment les dictionnaires sont-ils implémentés dans CPython ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pourquoi les clés du dictionnaire sont immuables ?",
+          "qas": [
+            {
+              "id": "5041150307616922832",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Pourquoi les clés du dictionnaire sont immuables ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pourquoi list.sort() ne renvoie pas la liste triée ?",
+          "qas": [
+            {
+              "id": "2059183544044430279",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Pourquoi list.sort() ne renvoie pas la liste triée ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pourquoi Python permet-il les virgules à la fin des listes et des n-uplets ?",
+          "qas": [
+            {
+              "id": "2059183544044430279",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Pourquoi Python permet-il les virgules à la fin des listes et des n-uplets ?",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "A try/except block is extremely efficient if no exceptions are raised. Actually catching an exception is expensive. In versions of Python prior to 2.0 it was common to use this idiom:",
+          "qas": [
+            {
+              "id": "5212197131581769358",
+              "question": "Que peux-tu dire sur : exception ?",
+              "answers": [
+                {
+                  "text": "A try/except block is extremely efficient if no exceptions are raised. Actually catching an exception is expensive. In versions of Python prior to 2.0 it was common to use this idiom:",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Cela n'a de sens que si vous vous attendez à ce que le dictionnaire ait la clé presque tout le temps. Si ce n'était pas le cas, vous l'auriez codé comme suit :",
+          "qas": [
+            {
+              "id": "412694254366534337",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Cela n'a de sens que si vous vous attendez à ce que le dictionnaire ait la clé presque tout le temps. Si ce n'était pas le cas, vous l'auriez codé comme suit :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Dans les cas où vous devez choisir parmi un très grand nombre de possibilités, vous pouvez créer un dictionnaire faisant correspondre des valeurs à des fonctions à appeler. Par exemple :",
+          "qas": [
+            {
+              "id": "412694254366534337",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Dans les cas où vous devez choisir parmi un très grand nombre de possibilités, vous pouvez créer un dictionnaire faisant correspondre des valeurs à des fonctions à appeler. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Dans les cas où vous devez choisir parmi un très grand nombre de possibilités, vous pouvez créer un dictionnaire faisant correspondre des valeurs à des fonctions à appeler. Par exemple :",
+          "qas": [
+            {
+              "id": "3503918128095224396",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Dans les cas où vous devez choisir parmi un très grand nombre de possibilités, vous pouvez créer un dictionnaire faisant correspondre des valeurs à des fonctions à appeler. Par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Pour appeler les méthodes sur des objets, vous pouvez simplifier davantage en utilisant la fonction native getattr() pour récupérer les méthodes avec un nom donné :",
+          "qas": [
+            {
+              "id": "3503918128095224396",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Pour appeler les méthodes sur des objets, vous pouvez simplifier davantage en utilisant la fonction native getattr() pour récupérer les méthodes avec un nom donné :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Dans certaines implémentations de Python, le code suivant (qui fonctionne parfaitement avec CPython) aurait probablement manqué de descripteurs de fichiers :",
+          "qas": [
+            {
+              "id": "3503918128095224396",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Dans certaines implémentations de Python, le code suivant (qui fonctionne parfaitement avec CPython) aurait probablement manqué de descripteurs de fichiers :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Si vous voulez forcer Python à désallouer certains objets en quittant, utilisez le module atexit pour exécuter une fonction qui va forcer ces destructions.",
+          "qas": [
+            {
+              "id": "3407320244492240650",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Si vous voulez forcer Python à désallouer certains objets en quittant, utilisez le module atexit pour exécuter une fonction qui va forcer ces destructions.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Cela rend l'indexation d'une liste a[i] une opération dont le coût est indépendant de la taille de la liste ou de la valeur de l'indice.",
+          "qas": [
+            {
+              "id": "2345790744090087936",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Cela rend l'indexation d'une liste a[i] une opération dont le coût est indépendant de la taille de la liste ou de la valeur de l'indice.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Hacher les listes par leur adresse (ID de l'objet). Cela ne fonctionne pas parce que si vous créez une nouvelle liste avec la même valeur, elle ne sera pas retrouvée ; par exemple :",
+          "qas": [
+            {
+              "id": "2345790744090087936",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Hacher les listes par leur adresse (ID de l'objet). Cela ne fonctionne pas parce que si vous créez une nouvelle liste avec la même valeur, elle ne sera pas retrouvée ; par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Hacher les listes par leur adresse (ID de l'objet). Cela ne fonctionne pas parce que si vous créez une nouvelle liste avec la même valeur, elle ne sera pas retrouvée ; par exemple :",
+          "qas": [
+            {
+              "id": "3407320244492240650",
+              "question": "Que peux-tu dire sur : fonction ?",
+              "answers": [
+                {
+                  "text": "Hacher les listes par leur adresse (ID de l'objet). Cela ne fonctionne pas parce que si vous créez une nouvelle liste avec la même valeur, elle ne sera pas retrouvée ; par exemple :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Notez que le calcul de hachage peut être compliqué car il est possible que certains membres de la liste soient impossibles à hacher et aussi par la possibilité de débordement arithmétique.",
+          "qas": [
+            {
+              "id": "2345790744090087936",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Notez que le calcul de hachage peut être compliqué car il est possible que certains membres de la liste soient impossibles à hacher et aussi par la possibilité de débordement arithmétique.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Python 2.6 ajoute un module abc qui vous permet de définir des classes mères abstraites (ABC pour abstract base classes en anglais). Vous pouvez ensuite utiliser isinstance() et issubclass() pour vérifier si une instance ou une classe implémente une ABC particulière. Le module collections.abc définit un ensemble d'ABC utiles telles que Iterable, Container et collections.abc.MutableMapping.",
+          "qas": [
+            {
+              "id": "2253716874452425021",
+              "question": "Que permet de faire Python 2.6 ajoute un module abc qui vous ?",
+              "answers": [
+                {
+                  "text": "permet de définir des classes mères abstraites (ABC pour abstract base classes en anglais)",
+                  "answer_start": 41
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Remarquez comment le deuxième est un peu plus facile à lire. Remarquez aussi comment un deux-points introduit l'exemple dans cette réponse à la FAQ ; c'est un usage standard en français (et en anglais).",
+          "qas": [
+            {
+              "id": "4684124908618887636",
+              "question": "Qu'est-ce que Remarquez comment le deuxième ?",
+              "answers": [
+                {
+                  "text": "un peu plus facile à lire",
+                  "answer_start": 34
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Python vous permet d'ajouter une virgule à la fin des listes, des n-uplets et des dictionnaires :",
+          "qas": [
+            {
+              "id": "2345790744090087936",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Python vous permet d'ajouter une virgule à la fin des listes, des n-uplets et des dictionnaires :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Python vous permet d'ajouter une virgule à la fin des listes, des n-uplets et des dictionnaires :",
+          "qas": [
+            {
+              "id": "8527372200326367780",
+              "question": "Que peux-tu dire sur : dictionnaire ?",
+              "answers": [
+                {
+                  "text": "Python vous permet d'ajouter une virgule à la fin des listes, des n-uplets et des dictionnaires :",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Doc_Python_Part_10",
+      "paragraphs": [
+        {
+          "context": "Cette liste a l'air d'avoir quatre éléments, mais elle en contient en fait trois : \"fee\", \"fiefoo\" et \"fum\". Toujours ajouter la virgule permet d'éviter cette source d'erreur.",
+          "qas": [
+            {
+              "id": "2345790744090087936",
+              "question": "Que peux-tu dire sur : liste ?",
+              "answers": [
+                {
+                  "text": "Cette liste a l'air d'avoir quatre éléments, mais elle en contient en fait trois : \"fee\", \"fiefoo\" et \"fum\". Toujours ajouter la virgule permet d'éviter cette source d'erreur.",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
