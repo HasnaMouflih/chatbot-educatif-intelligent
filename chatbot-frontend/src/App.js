@@ -1,47 +1,40 @@
-// src/App.js
+// Fichier: src/App.js
 import React, { useState, useEffect } from 'react';
 import LoginPage from './components/LoginPage';
 import ChatPage from './components/ChatPage';
-import './App.css';
+import './App.css'; 
 
 function App() {
+  // On vérifie s'il y a un token au démarrage
   const [token, setToken] = useState(localStorage.getItem('authToken'));
-  const [userEmail, setUserEmail] = useState(localStorage.getItem('userEmail'));
 
-  // Effet pour vérifier le token au démarrage
-  useEffect(() => {
-    const storedToken = localStorage.getItem('authToken');
-    const storedEmail = localStorage.getItem('userEmail');
-    if (storedToken && storedEmail) {
-      setToken(storedToken);
-      setUserEmail(storedEmail);
-      // TODO: Idéalement, vérifier ici si le token est encore valide avec une requête API
-    }
-  }, []);
-
-  const handleLoginSuccess = (newToken, email) => {
+  // Cette fonction est celle qui est envoyée à LoginPage
+  const handleLogin = (newToken, email) => {
     localStorage.setItem('authToken', newToken);
     localStorage.setItem('userEmail', email);
     setToken(newToken);
-    setUserEmail(email);
   };
 
   const handleLogout = () => {
     localStorage.removeItem('authToken');
     localStorage.removeItem('userEmail');
     setToken(null);
-    setUserEmail(null);
   };
 
   return (
     <div className="App">
-      {token && userEmail ? (
-        <ChatPage userEmail={userEmail} onLogout={handleLogout} />
+      {!token ? (
+        // IMPORTANT : On passe la fonction handleLogin via la prop 'onLogin'
+        <LoginPage onLogin={handleLogin} />
       ) : (
-        <LoginPage onLoginSuccess={handleLoginSuccess} />
+        <ChatPage 
+          userEmail={localStorage.getItem('userEmail') || 'Utilisateur'} 
+          onLogout={handleLogout} 
+        />
       )}
     </div>
   );
 }
 
 export default App;
+
