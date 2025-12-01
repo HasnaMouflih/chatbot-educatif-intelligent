@@ -1,0 +1,141 @@
+/* src/style/ProfileModal.css */
+
+/* Fond sombre et flouté (Glassmorphism) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px); /* Le flou moderne */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* La Boîte Blanche (Card) */
+.modal-content {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 24px; /* Coins très arrondis */
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  position: relative;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Bouton Fermer (X) */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f1f3f4;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: #5f6368;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Titre */
+.modal-content h2 {
+  margin-top: 0;
+  color: #1f1f1f;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.modal-content p {
+  text-align: center;
+  color: #007bff;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  background: #e8f0fe;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Champs de formulaire */
+form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444746;
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #dfe1e5;
+  border-radius: 12px; /* Input arrondi */
+  font-size: 1rem;
+  color: #1f1f1f;
+  transition: all 0.2s;
+  background-color: #f8f9fa;
+}
+
+form input:focus {
+  background-color: #fff;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
+  outline: none;
+}
+
+/* Bouton Sauvegarder */
+.save-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background-color: #0b57d0; /* Le bleu Google officiel */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Bouton Pilule */
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.save-btn:hover {
+  background-color: #0842a0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+/* Messages d'erreur/succès */
+.status-msg {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.success { background-color: #e6f4ea; color: #137333; }
+.error { background-color: #fce8e6; color: #c5221f; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }

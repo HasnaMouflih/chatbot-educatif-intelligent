@@ -1,0 +1,160 @@
+/* src/style/MessageInput.css */
+
+/* Wrapper global */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Espace entre le fichier et la barre */
+}
+
+/* --- ZONE PREVIEW FICHIER (Au-dessus) --- */
+.file-preview {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  border-left: 4px solid #007bff; /* Petite barre bleue décorative */
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  animation: slideUp 0.2s ease-out;
+  max-width: 90%;
+}
+
+.file-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+.file-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.file-type {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-file-btn:hover {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* --- BARRE DE SAISIE (Pilule) --- */
+.message-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px; /* Arrondi prononcé */
+  padding: 5px 5px 5px 15px; /* Padding asymétrique pour le bouton envoyer */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  transition: box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.message-input-container:focus-within {
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.1);
+  border-color: #007bff;
+}
+
+/* Input Texte */
+.message-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 8px;
+  font-size: 15px;
+  color: #333;
+  font-family: inherit;
+  resize: none;
+  max-height: 100px;
+}
+
+/* Bouton Upload (Trombone) */
+.upload-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  padding: 8px;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.upload-button:hover {
+  color: #007bff;
+  background-color: #f0f8ff;
+}
+
+/* Bouton Envoyer (Rond Bleu) */
+.send-button {
+  background-color: #007bff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.send-button:disabled {
+  background-color: #e0e0e0;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Icônes SVG */
+.icon-svg { width: 22px; height: 22px; }
+.send-icon-svg { width: 18px; height: 18px; margin-left: -2px; transform: rotate(45deg); } /* Petite rotation pour l'avion */
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

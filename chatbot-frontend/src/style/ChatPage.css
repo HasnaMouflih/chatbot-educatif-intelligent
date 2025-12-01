@@ -263,3 +263,19 @@
   margin-left: auto;   /* Force l'alignement */
   /* width: 70%; /* Si tu avais une largeur fixe, vérifie qu'elle est toujours là */ 
 }
+/* --- Avatar utilisateur (CERCLE PARFAIT) --- */
+.user-icon-container {
+    background-color: #28a745;      /* Couleur verte */
+    color: white;                   /* Couleur de la lettre */
+    width: 42px;                    /* Légèrement plus large pour la lisibilité */
+    height: 42px;
+    border-radius: 50%;             /* Rond parfait */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;               /* Lettre plus visible */
+    font-size: 18px;                /* Taille de la lettre */
+    text-transform: uppercase;      /* Lettre toujours en majuscule */
+    user-select: none;              /* Impossible de sélectionner la lettre */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);  /* Petit effet propre */
+}
