@@ -18,6 +18,7 @@ env/
 venv/
 .python-version
 
+.env
 
 src/raq_model/
 src/
