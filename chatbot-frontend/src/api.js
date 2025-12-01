@@ -1,15 +1,10 @@
 // src/api.js
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000'; // Votre backend FastAPI
-
-// Fonction pour obtenir le token depuis le localStorage
+const API_URL = 'http://127.0.0.1:8000';
 const getToken = () => localStorage.getItem('authToken');
 
-// Créer une instance axios pour ajouter automatiquement le header d'authentification
-const apiClient = axios.create({
-  baseURL: API_URL,
-});
+const apiClient = axios.create({ baseURL: API_URL });
 
 apiClient.interceptors.request.use(
   (config) => {
@@ -19,60 +14,79 @@ apiClient.interceptors.request.use(
     }
     return config;
   },
+  (error) => Promise.reject(error)
+);
+
+apiClient.interceptors.response.use(
+  (response) => response,
   (error) => {
+    if (error.response && error.response.status === 401) {
+      localStorage.removeItem('authToken');
+      localStorage.removeItem('userEmail');
+      window.location.href = "/"; 
+    }
     return Promise.reject(error);
   }
 );
 
-// --- Fonctions d'API ---
-
+// Auth
 export const loginUser = async (email, password) => {
-  // FastAPI attend les données de login en 'form-data'
   const formData = new URLSearchParams();
   formData.append('username', email);
   formData.append('password', password);
-
-  const response = await apiClient.post('/users/login', formData, {
-     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  });
-  return response.data; // Renvoie { access_token: "...", token_type: "bearer" }
+  const response = await apiClient.post('/users/login', formData);
+  return response.data;
 };
 
 export const signupUser = async (email, password) => {
-  const response = await apiClient.post('/users/signup', {
-    username: email,
-    password: password,
-  });
-  return response.data; // Renvoie { access_token: "...", token_type: "bearer" }
+  const response = await apiClient.post('/users/signup', { username: email, password: password });
+  return response.data;
 };
 
+export const updateUserProfile = async (password, fullName) => {
+    const payload = {};
+    if (password) payload.password = password;
+    if (fullName) payload.full_name = fullName;
+    const response = await apiClient.put('/users/me', payload);
+    return response.data;
+};
+
+// Chat
 export const fetchChatIds = async () => {
   const response = await apiClient.get('/history/ids');
-  return response.data.chat_ids || []; // Renvoie ["chat_...", "chat_..."]
+  // Le backend renvoie maintenant { all_ids: [], pinned_ids: [] }
+  return response.data; 
 };
 
 export const fetchChatHistory = async (chatId) => {
-  if (!chatId) return []; // Ne rien faire si chatId est null
+  if (!chatId) return [];
   const response = await apiClient.get(`/history/${chatId}`);
-  return response.data.history || []; // Renvoie [{role: 'user', content: '...'}, ...]
+  return response.data.history || [];
 };
 
 export const askChatbot = async (chatId, question) => {
-  const response = await apiClient.post('/ask', {
-    chat_id: chatId,
-    question: question,
-  });
-  return response.data.reponse; // Renvoie la réponse du bot (string)
+  const response = await apiClient.post('/ask', { chat_id: chatId, question: question });
+  return response.data.reponse;
 };
-// src/api.js
-// ... (garder les imports et les autres fonctions) ...
 
-// --- NOUVELLE FONCTION POUR SUPPRIMER ---
+export const uploadPDF = async (chatId, file) => {
+  const formData = new FormData();
+  formData.append('file', file);
+  const response = await apiClient.post(`/upload_pdf?chat_id=${chatId}`, formData);
+  return response.data;
+};
+
+// Actions Historique
 export const deleteChatHistory = async (chatId) => {
-  if (!chatId) return; // Ne rien faire si chatId est null
-  // La réponse sera vide (statut 204), donc on ne s'attend pas à .data
+  if (!chatId) return;
   await apiClient.delete(`/history/${chatId}`);
 };
-// --- FIN NOUVELLE FONCTION ---
 
-// ... (garder askChatbot, etc.)
+export const deleteAllHistory = async () => {
+    await apiClient.delete('/history/all');
+};
+
+export const togglePinChat = async (chatId) => {
+    const response = await apiClient.post(`/history/pin/${chatId}`);
+    return response.data.status; // "pinned" ou "unpinned"
+};
