@@ -1,136 +1,299 @@
-// src/components/Sidebar.js (Version avec menu trois points)
+// src/components/Sidebar.js
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { 
+    fetchChatIds, 
+    togglePinChat, 
+    deleteChatHistory, 
+    deleteAllHistory 
+} from '../api';
 
-// --- Imports ---
-import React, { useState, useEffect } from 'react';
-import { fetchChatIds } from '../api';
-// Pas besoin d'importer le CSS ici si tu l'as mis dans ChatPage.css
+import ProfileModal from './ProfileModal';
+import '../style/Sidebar.css';
 
-// --- Fonction Utilitaire ---
-const formatChatTitle = (chatId) => {
-  try {
-    const timestamp = parseInt(chatId.split('_')[1], 10);
+// --- FONCTION UTILITAIRE : FORMATAGE DATE ---
+const formatDate = (timestamp) => {
     const date = new Date(timestamp);
-    return date.toLocaleDateString('fr-FR', { day: '2-digit', month: '2-digit' }) + ' ' +
-           date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
-  } catch (e) {
-    return chatId;
-  }
+    return new Intl.DateTimeFormat('fr-FR', { month: 'short', day: 'numeric' }).format(date);
 };
 
-// --- Composant Principal ---
-function Sidebar({ userEmail, onLogout, onSelectChat, onNewChat, currentChatId, refreshCounter, onDeleteChat }) {
-  // --- États ---
-  const [chatList, setChatList] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  // --- NOUVEL ÉTAT: Pour suivre quel menu est ouvert ---
-  const [openMenuId, setOpenMenuId] = useState(null); // null = aucun menu ouvert
+// --- COMPOSANT PRINCIPAL ---
 
-  // --- Effet ---
-  // Charge la liste des IDs de chat
-  useEffect(() => {
-    const loadHistory = async () => {
-      setLoading(true);
-      setError('');
-      try {
-        const ids = await fetchChatIds();
-        setChatList(ids);
-      } catch (err) {
-        setError('Erreur chargement historique.');
-        console.error("Load chat IDs error:", err);
-      } finally {
-        setLoading(false);
-      }
+function Sidebar({ userEmail, onLogout, onSelectChat, onNewChat, currentChatId, refreshCounter }) {
+    const [chatList, setChatList] = useState([]);
+    const [pinnedList, setPinnedList] = useState([]);
+    // NOUVEAU: Stocke le mapping {chatId: {title: 'Mon Titre'}}
+    const [chatDetails, setChatDetails] = useState({}); 
+    const [loading, setLoading] = useState(false);
+    
+    // États pour l'interface
+    const [activeMenuId, setActiveMenuId] = useState(null); 
+    const [showProfile, setShowProfile] = useState(false);
+    
+    // Référence pour détecter le clic dehors
+    const sidebarRef = useRef(null);
+
+    // --- LOGIQUE DE CHARGEMENT ---
+    const loadData = useCallback(async () => {
+        setLoading(true);
+        try {
+            // Supposons que fetchChatIds() retourne toujours {all_ids: [...], pinned_ids: [...]}
+            const data = await fetchChatIds();
+            const allIds = data.all_ids || [];
+            const pinnedIds = data.pinned_ids || [];
+            
+            setChatList(allIds);
+            setPinnedList(pinnedIds);
+
+            // ⚠️ SIMULATION DES VRAIS TITRES
+            // EN PRODUCTION, VOUS DEVEZ MODIFIER VOTRE API POUR QU'ELLE RETOURNE LE TITRE RÉEL
+            // Ceci simule un titre plus pertinent que la simple date:
+            const detailsMap = allIds.reduce((acc, chatId, index) => {
+                let title = "Conversation non titrée";
+                
+                try {
+                    // Pour la simulation, on utilise la date comme fallback ou pour trier
+                    const parts = chatId.split('_');
+                    const ts = parseInt(parts[parts.length - 1], 10);
+                    
+                    if (!isNaN(ts) && ts.toString().length >= 10) {
+                        // Simuler des titres de sujet basés sur l'index (pour l'exemple)
+                        if (index === 0) title = "Calcul de la somme en Python (Dernier)";
+                        else if (index === 1) title = "Résumé des étapes du projet 2024";
+                        else if (index === 2) title = "Explication de l'algorithme de tri";
+                        else title = `Sujet du ${formatDate(ts)}` // Fallback si trop d'éléments
+                    }
+                } catch {}
+                
+                acc[chatId] = { title: title };
+                return acc;
+            }, {});
+            setChatDetails(detailsMap);
+
+        } catch (err) {
+            console.error("Erreur de chargement de la sidebar:", err);
+        } finally {
+            setLoading(false);
+        }
+    }, []);
+
+    // Charger les données initiales et lors du refresh
+    useEffect(() => {
+        loadData();
+    }, [refreshCounter, loadData]);
+    
+    // Fermer les menus si on clique ailleurs
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setActiveMenuId(null);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+    
+    // --- ACTIONS ---
+
+    const handlePin = async (e, chatId) => {
+        e.stopPropagation();
+        setActiveMenuId(null); 
+        
+        const isCurrentlyPinned = pinnedList.includes(chatId);
+        
+        try {
+            await togglePinChat(chatId);
+            
+            // Mise à jour de l'état local
+            setPinnedList(prev => 
+                isCurrentlyPinned 
+                    ? prev.filter(id => id !== chatId) 
+                    : [chatId, ...prev]
+            );
+            
+        } catch (err) {
+            console.error(`Erreur d'épinglage du chat ${chatId}:`, err);
+        }
     };
-    loadHistory();
-  }, [refreshCounter]);
 
-  // --- Gestionnaires d'Événements ---
+    const handleDelete = async (e, chatId) => {
+        e.stopPropagation();
+        setActiveMenuId(null); 
+        
+        if (window.confirm("Supprimer cette conversation définitivement ?")) {
+            try {
+                await deleteChatHistory(chatId);
+                
+                // Mise à jour des listes locales
+                setChatList(prev => prev.filter(id => id !== chatId));
+                setPinnedList(prev => prev.filter(id => id !== chatId));
+                
+                // Supprimer les détails du chat également
+                setChatDetails(prev => {
+                    const { [chatId]: _, ...rest } = prev;
+                    return rest;
+                });
+                
+                if (currentChatId === chatId) {
+                    onNewChat();
+                }
+            } catch (err) {
+                console.error(`Erreur suppression chat ${chatId}:`, err);
+            }
+        }
+    };
 
-  // Gère le clic sur les trois points (ouvre/ferme le menu)
-  const handleToggleMenu = (e, chatId) => {
-    e.stopPropagation(); // Empêche la sélection du chat
-    setOpenMenuId(prevId => (prevId === chatId ? null : chatId)); // Ouvre si fermé, ferme si déjà ouvert
-  };
+    const handleDeleteAll = async () => {
+        if (window.confirm("ATTENTION : Cela va effacer TOUT l'historique. Continuer ?")) {
+            try {
+                await deleteAllHistory();
+                setChatList([]);
+                setPinnedList([]);
+                setChatDetails({}); // Vider les détails
+                onNewChat();
+            } catch (err) {
+                console.error("Erreur suppression de tout l'historique:", err);
+            }
+        }
+    };
+    
+    // --- SÉPARATION ET TRI DES LISTES (Optimisation avec useMemo) ---
+    const { pinnedChats, recentChats } = useMemo(() => {
+        const sortedChats = [...chatList];
+        
+        const pinned = sortedChats.filter(id => pinnedList.includes(id));
+        const recent = sortedChats.filter(id => !pinnedList.includes(id));
+        
+        return { pinnedChats: pinned, recentChats: recent };
+    }, [chatList, pinnedList]);
 
-  // Gère le clic sur le bouton supprimer DANS le menu
-  const handleDeleteClick = (e, chatId) => {
-    e.stopPropagation();
-    if (window.confirm(`Voulez-vous vraiment supprimer cette conversation (${formatChatTitle(chatId)}) ?`)) {
-      onDeleteChat(chatId);
-      setOpenMenuId(null); // Ferme le menu après suppression
-    }
-  };
 
-  // --- Rendu JSX ---
-  return (
-    <div className="sidebar">
-      {/* En-tête */}
-      <div className="sidebar-header">
-        <h2> Bienvenue,</h2>
-        <p className="user-email">{userEmail}</p>
-      </div>
+    // --- RENDU D'UN ÉLÉMENT DE LA LISTE ---
+    const renderChatItem = (chatId) => {
+        const isPinned = pinnedList.includes(chatId);
+        const isActive = currentChatId === chatId;
+        const isMenuOpen = activeMenuId === chatId;
+        
+        // NOUVEAU: Récupérer le titre SIGNIFICATIF
+        const chatTitle = chatDetails[chatId]?.title || "Conversation"; 
+        
+        // Icône de bulle de conversation (par défaut)
+        const chatIcon = (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        );
 
-      {/* Bouton Nouveau Chat */}
-      <button className="new-chat-btn" onClick={onNewChat}>
-         Nouveau Chat
-      </button>
+        // Icône épinglée
+        const pinIcon = (
+            <svg viewBox="0 0 24 24" fill="currentColor" className="pin-icon"><path d="M16 12V4H17V2H7V4H8V12L6 14V16H11.2V22H12.8V16H18V14L16 12Z"/></svg>
+        );
 
-      {/* Titre Historique */}
-      <div className="history-title">Historique</div>
+        // Icône 3 points du menu
+        const menuIcon = (
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+        );
+        
+        const iconToUse = isPinned ? pinIcon : chatIcon;
 
-      {/* Liste des conversations */}
-      <div className="history-list">
-        {loading && <p className="loading-text">Chargement...</p>}
-        {error && <p className="error-message">{error}</p>}
-        {!loading && !error && chatList.map((chatId) => (
-          // Conteneur pour chaque ligne (important pour le positionnement du menu)
-          <div key={chatId} className="history-item-container">
-            {/* Bouton principal pour sélectionner le chat */}
-            <button
-              className={`history-item ${chatId === currentChatId ? 'active' : ''}`}
-              onClick={() => { setOpenMenuId(null); onSelectChat(chatId); }} // Ferme menu si on sélectionne
-              title={formatChatTitle(chatId)}
-            >
-              <span className="history-item-icon">💬</span> {/* Icône texte */}
-              <span className="history-item-text">{formatChatTitle(chatId)}</span> {/* Texte */}
-            </button>
 
-            {/* --- MODIFICATION: Bouton Trois Points --- */}
-            <button
-              className="options-btn"
-              onClick={(e) => handleToggleMenu(e, chatId)}
-              title="Options"
-            >
-              ⋮ {/* Ou utilisez une icône SVG/FontAwesome */}
-            </button>
-            {/* --- FIN MODIFICATION --- */}
-
-            {/* --- MODIFICATION: Menu Supprimer (Conditionnel) --- */}
-            {openMenuId === chatId && (
-              <div className="delete-menu">
-                <button
-                  className="delete-menu-btn"
-                  onClick={(e) => handleDeleteClick(e, chatId)}
+        return (
+            <div key={chatId} className={`nav-item-container ${isActive ? 'active' : ''}`}>
+                <div 
+                    className="nav-item" 
+                    onClick={() => { onSelectChat(chatId); setActiveMenuId(null); }}
                 >
-                  <span role="img" aria-label="Supprimer">🗑️</span> Supprimer
-                </button>
-              </div>
-            )}
-            {/* --- FIN MODIFICATION --- */}
-          </div>
-        ))}
-        {!loading && !error && chatList.length === 0 && (
-          <p className="no-history">Aucun historique trouvé.</p>
-        )}
-      </div>
+                    <span className="icon">
+                        {iconToUse}
+                    </span>
+                    
+                    <span className="title">
+                        {/* AFFICHE LE TITRE OU UN TITRE PAR DÉFAUT */}
+                        {chatTitle} 
+                    </span>
+                </div>
 
-      {/* Bouton Déconnexion */}
-      <button className="logout-btn" onClick={onLogout}>
-        🚪 Se Déconnecter
-      </button>
-    </div>
-  );
+                {/* Bouton Menu (3 points) */}
+                <button 
+                    className="menu-trigger" 
+                    onClick={(e) => { 
+                        e.stopPropagation(); 
+                        setActiveMenuId(isMenuOpen ? null : chatId); 
+                    }}
+                >
+                    {menuIcon}
+                </button>
+
+                {/* Menu Contextuel Flottant */}
+                {isMenuOpen && (
+                    <div className="context-menu" onClick={(e) => e.stopPropagation()}>
+                        <button onClick={(e) => handlePin(e, chatId)}>
+                            {isPinned ? 'Détacher' : 'Épingler'}
+                        </button>
+                        <button className="delete-btn" onClick={(e) => handleDelete(e, chatId)}>
+                            Supprimer
+                        </button>
+                    </div>
+                )}
+            </div>
+        );
+    };
+
+
+    return (
+        <div className="sidebar" ref={sidebarRef}>
+            {/* 1. Header (Nouveau Chat) */}
+            <div className="sidebar-header">
+                <button className="new-chat-btn" onClick={onNewChat}>
+                    <span>Nouveau Chat</span> 
+                </button>
+            </div>
+
+            {/* 2. Liste Scrollable */}
+            <div className="sidebar-nav">
+                
+                {/* 2a. Section Épinglés */}
+                {pinnedChats.length > 0 && (
+                    <div className="nav-section">
+                        <div className="section-label">Favoris</div>
+                        {pinnedChats.map(renderChatItem)}
+                    </div>
+                )}
+
+                {/* 2b. Section Récents */}
+                <div className="nav-section">
+                    <div className="section-label">Récents</div>
+                    {loading ? (
+                        <div className="loading-placeholder">Chargement des conversations...</div>
+                    ) : chatList.length === 0 ? (
+                        <div className="empty-state">Commencez une nouvelle conversation.</div>
+                    ) : (
+                        recentChats.map(renderChatItem)
+                    )}
+                </div>
+            </div>
+
+            {/* 3. Footer (Profil & Options) */}
+            <div className="sidebar-footer">
+                <button className="footer-item" onClick={() => setShowProfile(true)} title="Gérer le profil">
+                    <div className="avatar-circle">{userEmail.charAt(0).toUpperCase()}</div>
+                    <div className="footer-text">
+                        <div className="user-name">Mon Compte</div>
+                        <div className="user-email-sub">{userEmail}</div>
+                    </div>
+                </button>
+                
+                <div className="footer-actions">
+                    <button className="icon-btn danger" onClick={handleDeleteAll} title="Tout supprimer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </button>
+                    <button className="icon-btn" onClick={onLogout} title="Se déconnecter">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    </button>
+                </div>
+            </div>
+
+            {/* Modale Profil */}
+            {showProfile && <ProfileModal userEmail={userEmail} onClose={() => setShowProfile(false)} />}
+        </div>
+    );
 }
 
 export default Sidebar;
