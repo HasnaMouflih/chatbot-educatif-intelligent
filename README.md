@@ -1,31 +1,52 @@
+1. Backend
 
-Personne A : Ingénieur·e Données (Data Engineer)
+FastAPI : API rapide et sécurisée.
 
-Personne B : Ingénieur·e IA / Backend (AI/Backend)
+MongoDB Atlas : Gestion des utilisateurs et historique.
 
-Personne C : Ingénieur·e Frontend / Qualité (Frontend/QA)
+Pydantic : Validation des données.
 
+OAuth2 + JWT : Authentification sécurisée.
 
-L'Architecture Complète (Le Flux de Données)
-Imaginez un utilisateur qui pose une question :
+pypdf : Extraction de texte à partir de fichiers PDF.
 
-L'utilisateur écrit dans le [Frontend].
+HuggingFace Inference API (Zephyr) : Accès au LLM pour explications détaillées.
 
-Le Frontend envoie la question au [Backend].
+2. IA / Machine Learning
 
-Le Backend demande au [Modèle IA] de trouver une réponse.
+Transformers (BERT) fine-tuné pour le RAQ.
 
-Le Modèle IA renvoie la réponse au Backend.
+Pipeline QA pour répondre aux questions.
 
-Le Backend renvoie la réponse au Frontend.
+Similarity Matching pour le retrieval.
 
-Le Frontend affiche la réponse à l'utilisateur.
+RAG pour combiner la mémoire locale avec le modèle de génération.
 
-# Projet : Chatbot Éducatif IA 🤖📚
+3. Data
 
-... (Toute la description que tu as déjà) ...
+Pandas pour le traitement.
 
----
+Dataset nettoyé : dataset_cleaned_readable.csv.
+
+4. Fonctionnalités
+
+Création de compte et connexion sécurisée.
+
+Mise à jour du profil.
+
+Chat IA intelligent.
+
+Upload et analyse automatique de PDF.
+
+Historique complet des chats.
+
+Suppression partielle ou totale.
+
+Chats épinglés (Pin).
+
+RAQ pour la mémoire locale.
+
+IA Zephyr pour explications détaillées.
 
 ## 🏎️ Lancement (Installation Locale)
 
@@ -45,5 +66,6 @@ Les fichiers du modèle IA (fine-tuné) et du dataset sont trop volumineux pour 
 5.  Assurez-vous que le chemin dans `src/model_utils.py` correspond bien (`nom_modele_ou_chemin = "models_saved/mon_chatbot_EN_v2"`).
 
 **5. Lancer l'Application**
+
 
 ... (Instructions `uvicorn` et `npm start`) ...
