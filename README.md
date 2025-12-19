@@ -1,71 +1,50 @@
-1. Backend
+# Chatbot Éducatif Intelligent pour Python
 
-FastAPI : API rapide et sécurisée.
+## 📝 Description
+Ce projet consiste en un **chatbot éducatif hybride** capable de répondre avec précision aux questions académiques liées au langage Python.  
+Le système exploite à la fois des **documents locaux** (PDF ou datasets) et un **modèle de Deep Learning fine-tuné**, pour fournir des réponses contextualisées et traçables.  
 
-MongoDB Atlas : Gestion des utilisateurs et historique.
+Le projet couvre toute la **chaîne de valeur de la donnée** :
+1. Extraction et nettoyage de données brutes.
+2. Modélisation et fine-tuning du modèle NLP.
+3. Déploiement via une API sécurisée.
+4. Interface utilisateur moderne en React.
 
-Pydantic : Validation des données.
+---
 
-OAuth2 + JWT : Authentification sécurisée.
+## 🚀 Fonctionnalités
+- Création et gestion de comptes utilisateurs (authentification JWT/OAuth2).  
+- Upload et analyse automatique de fichiers PDF.  
+- Chat intelligent avec mémoire locale (RAQ).  
+- Intégration d’un LLM via API (Zephyr) pour explications détaillées.  
+- Historique des conversations avec possibilité de suppression partielle ou totale.  
+- Chats épinglés pour un accès rapide.  
+- Modèle CamemBERT fine-tuné pour le **Question-Answering en français**.  
+- Option LoRA pour entraînements plus légers et rapides.
 
-pypdf : Extraction de texte à partir de fichiers PDF.
+---
 
-HuggingFace Inference API (Zephyr) : Accès au LLM pour explications détaillées.
+## 🛠 Architecture
 
-2. IA / Machine Learning
+### Backend
+- **FastAPI** : serveur API rapide et sécurisé.  
+- **MongoDB Atlas** : stockage utilisateurs et historique.  
+- **Pydantic** : validation des données.  
+- **pypdf** : extraction de texte à partir de PDF.  
+- Authentification : JWT / OAuth2.
 
-Transformers (BERT) fine-tuné pour le RAQ.
+### Machine Learning / IA
+- **CamemBERT** fine-tuné pour RAQ (Retrieval-Augmented Question Answering).  
+- **RAG** : utilisation de la mémoire locale pour contextualiser les réponses.  
+- Fine-tuning avec **LoRA** pour certaines expérimentations.  
+- **HuggingFace Transformers & PyTorch** pour l’entraînement et l’inférence.  
 
-Pipeline QA pour répondre aux questions.
+### Frontend
+- **React.js** pour une interface moderne et réactive.  
+- Gestion des fonctionnalités : historique, épinglage de chats, upload PDF.  
+- Communication sécurisée avec le backend via JWT.
 
-Similarity Matching pour le retrieval.
+---
 
-RAG pour combiner la mémoire locale avec le modèle de génération.
+## 🗂 Structure du Projet
 
-3. Data
-
-Pandas pour le traitement.
-
-Dataset nettoyé : dataset_cleaned_readable.csv.
-
-4. Fonctionnalités
-
-Création de compte et connexion sécurisée.
-
-Mise à jour du profil.
-
-Chat IA intelligent.
-
-Upload et analyse automatique de PDF.
-
-Historique complet des chats.
-
-Suppression partielle ou totale.
-
-Chats épinglés (Pin).
-
-RAQ pour la mémoire locale.
-
-IA Zephyr pour explications détaillées.
-
-## 🏎️ Lancement (Installation Locale)
-
-... (Toutes les instructions pour le Backend et le Frontend) ...
-
-### ⚠️ Étape Importante : Télécharger le Modèle IA et le Dataset
-
-Les fichiers du modèle IA (fine-tuné) et du dataset sont trop volumineux pour GitHub et doivent être téléchargés séparément.
-
-1.  **Téléchargez les fichiers .zip** depuis ce lien Google Drive :
-    [Lien Google Drive vers les Modèles/Datasets](https://drive.google.com/drive/folders/1wf5FAhGWktXx-dmWFF2phxh__nYb2bVF?usp=drive_link)
-    *(Contient : `mon_chatbot_EN_v22.zip` et `dataset_educatif.csv1.zip`)*
-
-2.  **Décompressez le modèle** (`mon_chatbot_EN_v22.zip`).
-3.  **Placez** le dossier décompressé (ex: `mon_chatbot_EN_v2`) à l'intérieur du dossier `/models_saved/` de ce projet.
-4.  (Le fichier `dataset_educatif.csv1.zip` n'est nécessaire que pour refaire l'entraînement).
-5.  Assurez-vous que le chemin dans `src/model_utils.py` correspond bien (`nom_modele_ou_chemin = "models_saved/mon_chatbot_EN_v2"`).
-
-**5. Lancer l'Application**
-
-
-... (Instructions `uvicorn` et `npm start`) ...
